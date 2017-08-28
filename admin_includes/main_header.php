@@ -1,6 +1,8 @@
 <?php 
 ob_start();
 include_once('admin_includes/config.php');
+include_once('admin_includes/common_functions.php');
+
 
 /*if(!isset($_SESSION['admin_user_id'])) {
     header("Location: logout.php");
