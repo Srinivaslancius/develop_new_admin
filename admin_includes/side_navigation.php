@@ -11,7 +11,22 @@
                 <span class="menu-text">Dashboards</span>
               </a>
               <ul class="sidebar-submenu collapse">
-                <li class="active"><a href="dashboard.php">Dashboards</a></li>
+                <li class=""><a href="dashboard.php">Dashboards</a></li>
+              </ul>
+            </li>
+            <li class="with-sub">
+              <a href="#" aria-haspopup="true">
+                <span class="menu-icon">
+                  <i class="zmdi zmdi-border-all"></i>
+                </span>
+                <span class="menu-text">Users</span>
+              </a>
+              <ul class="sidebar-submenu collapse">
+                <li class="menu-subtitle">Users</li>
+                <li><a href="admin_users.php">Admin Users</a></li>
+                <!-- <li><a href="tables-basic.html">Basic tables</a></li> -->
+                <li><a href="tables-responsive.html">Responsive tables</a></li>
+                <li><a href="tables-datatables.html">DataTables</a></li>
               </ul>
             </li>           
             <li class="menu-title">Components</li>
@@ -71,11 +86,12 @@
                 <span class="menu-icon">
                   <i class="zmdi zmdi-border-all"></i>
                 </span>
-                <span class="menu-text">Tables</span>
+                <span class="menu-text">Users</span>
               </a>
               <ul class="sidebar-submenu collapse">
-                <li class="menu-subtitle">Tables</li>
-                <li><a href="tables-basic.html">Basic tables</a></li>
+                <li class="menu-subtitle">Users</li>
+                <li><a href="admin_users.php">Admin Users</a></li>
+                <!-- <li><a href="tables-basic.html">Basic tables</a></li> -->
                 <li><a href="tables-responsive.html">Responsive tables</a></li>
                 <li><a href="tables-datatables.html">DataTables</a></li>
               </ul>
