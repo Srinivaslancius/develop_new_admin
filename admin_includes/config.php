@@ -13,8 +13,7 @@ if($setcon == 1) {
 	$username = "root";
 	$password = "root";
 	$dbname = "develop_new_admin";
-} 
- 
+}  
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

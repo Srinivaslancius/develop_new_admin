@@ -1,3 +1,12 @@
+<?php 
+ob_start();
+include_once('admin_includes/config.php');
+
+/*if(!isset($_SESSION['admin_user_id'])) {
+    header("Location: logout.php");
+    exit;
+}*/
+?>
 <!DOCTYPE html>
 <html lang="en">  
 
