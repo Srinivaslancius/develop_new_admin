@@ -26,7 +26,7 @@
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo substr(strip_tags($row['description']), 0,150);?></td>                    
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td>X</td>
+                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-edit"></i></td>
                   </tr>
                   <?php  $i++; } ?>                  
                 </tbody>                
