@@ -1,6 +1,6 @@
 <?php
     
-    function getDataWithTables($table=NULL,$status,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL) {
+    function getDataFromTables($table=NULL,$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL) {
 
         global $conn;
         if($table!='' && $table!=NULL && $clause!='' && $clause!=NULL && $id!='' && $id!=NULL) {

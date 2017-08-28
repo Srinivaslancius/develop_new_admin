@@ -8,7 +8,7 @@ if(!isset($_SESSION['admin_user_id'])) {
     //exit;
 }
 ?>
-<?php getDataWithTables('admin_users',$status='',$clause='',$id='',$activeStatus='',$activeTop=''); ?>
+
 <!DOCTYPE html>
 <html lang="en">  
 
