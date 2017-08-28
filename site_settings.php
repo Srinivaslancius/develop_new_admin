@@ -360,7 +360,7 @@
                 </span>
                 <span class="menu-text">Page layouts</span>
               </a>
-              <a href="site_settings.php">
+              <a href="site-settings.html">
                 <span class="menu-icon">
                   <i class="zmdi zmdi-view-web"></i>
                 </span>
@@ -925,7 +925,7 @@
               <div class="col-md-8">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label class="col-sm-3 control-label" for="form-control-1">Text input</label>
+                    <label class="col-sm-3 control-label" for="form-control-1">Admin Title</label>
                     <div class="col-sm-9">
                       <input id="form-control-1" class="form-control" type="text">
                     </div>
