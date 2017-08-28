@@ -125,32 +125,8 @@
                 <li><a href="pages-404.html">404</a></li>                                
                 <li><a href="pages-invoice.html">Invoice</a></li>
               </ul>
-            </li>
-            <li class="menu-title">Tags</li>
-            <li>
-              <a href="documentation.html">
-                <span class="menu-icon">
-                  <i class="zmdi zmdi-circle text-success"></i>
-                </span>
-                <span class="menu-text">Documentation</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="menu-icon">
-                  <i class="zmdi zmdi-circle text-warning"></i>
-                </span>
-                <span class="menu-text">Questions</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="menu-icon">
-                  <i class="zmdi zmdi-circle text-danger"></i>
-                </span>
-                <span class="menu-text">Website</span>
-              </a>
-            </li>
+            </li>          
+         
           </ul>
         </div>
       </div>
