@@ -1,22 +1,30 @@
 <?php
     
-    function getIndividualDetails($id,$table,$clause)
-    {
-        global $conn;
-        $sql="select * from `$table` where `$clause` = '$id' ";
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();        
-        return $row;
-    }
+    function getDataWithTables($table=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL) {
 
-    /*Common function with where out where get all data from query */
-    function getAllData($table)
-    {
         global $conn;
-        $sql="select * from `$table` ";
+        if($table!='' && $table!=NULL && $clause!='' && $clause!=NULL && $id!='' && $id!=NULL) {
+            //Get All Table Data with Where Condition(4)            
+            $sql="select * from `$table` WHERE `$clause` = '$id' ";
+        } elseif($table!='' && $table!=NULL && $status!='' && $status!=NULL) {
+            //Get Active Records (3)         
+            $sql="select * from `$table` WHERE `status` = '$status' ORDER BY id DESC  ";
+        } elseif($table!='' && $table!=NULL && $activeTop!='' && $activeTop!=NULL) {
+            //Get All Active records top Table Data (6)
+            $sql="select * from `$table` ORDER BY status, id DESC ";
+        } elseif($table!='' && $table!=NULL) {
+            //Get All Table Data (1)
+            $sql="select * from `$table` ";
+        }  else {
+            //Last if fail then go to this 
+            $sql="select * from `$table` ";
+        } 
+
         $result = $conn->query($sql);         
         return $result;
+
     }
+  
 
     /*Common function with where out where get all data from query */
     function getAllDataWithActiveRecent($table)
@@ -25,60 +33,6 @@
         $sql="select * from `$table` ORDER BY status, id DESC ";
         $result = $conn->query($sql);         
         return $result;
-    }
-
-     /*Common function with where and check active status for get all records*/
-    function getAllDataCheckActive($table,$status)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE `status` = '$status' ORDER BY id DESC  ";
-        $result = $conn->query($sql);         
-        return $result;
-    }
-
-    function getAllDataCheckWithOurOrder($table,$status)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE `status` = '$status' ";
-        $result = $conn->query($sql);         
-        return $result;
-    }
-
-    /*Common function with where clause */
-    function getAllDataWhere($table,$clause,$id)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE `$clause` = '$id' ";
-        $result = $conn->query($sql);        
-        return $result;
-    }
-
-    /* Common function for get data using limit */
-     function getAllDataWithLimit($table,$limit,$status)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE status = '$status' AND availability_id=0 ORDER BY id DESC LIMIT 0,$limit ";
-        $result = $conn->query($sql);            
-        return $result;
-    }
-
-    /* Common function for get count for rows */
-     function getRowsCountWithUserId($table,$userId)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE `user_id` = '$userId' ";
-        $result = $conn->query($sql);
-        $noRows = $result->num_rows;        
-        return $noRows;
-    }
-
-     function getRowsCountWithUsermobile($table,$mobile)
-    {
-        global $conn;
-        $sql="select * from `$table` WHERE `user_mobile` = '$mobile' ";
-        $result = $conn->query($sql);
-        $noRows = $result->num_rows;        
-        return $noRows;
     }
 
     /* Common function for get count for rows */
@@ -104,20 +58,6 @@
         $key = "123";
         $admin_pwd = openssl_decrypt(hex2bin($admin_password),'AES-128-CBC',$key);  
         return $admin_pwd;
-    }
-
-    function sendMobileOTP($message,$user_mobile) {
-        global $conn;
-        $username = "succhendra";
-        $password = "succhendra@123@!";
-        $numbers = "$user_mobile"; // mobile number
-        $sender = urlencode('SAMPRA'); // assigned Sender_ID
-        //$message = urlencode('Your OTP Code is '.$user_otp.''); // Message text required to deliver on mobile number
-        $data = "username="."$username"."&password="."$password"."&to="."$numbers"."&from="."$sender"."&msg="."$message"."&type=1";
-        $data = "https://www.smsstriker.com/API/sms.php?".$data;
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,$data);
-        $response = curl_exec($ch);        
     }
 
     function getImageUnlink($val,$table,$clause,$id,$target_dir){
