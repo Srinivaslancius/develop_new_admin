@@ -5,6 +5,13 @@
     <script src="js/cosmos.min.js"></script>
     <script src="js/application.min.js"></script>
     <script src="js/index.min.js"></script>
+    <script>
+          var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+          };
+          
+    </script>
   </body>
 
 </html>
