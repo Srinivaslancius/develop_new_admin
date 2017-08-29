@@ -22,7 +22,7 @@
             <li class="<?php if($page_name == 'site_settings.php') { echo "active"; } ?>">
               <a href="site_settings.php" aria-haspopup="true">
                 <span class="menu-icon">
-                  <i class="zmdi zmdi-home"></i>
+                  <i class="zmdi zmdi-settings zmdi-hc-fw"></i>
                 </span>
                 <span class="menu-text">Site Settings</span>
               </a>
