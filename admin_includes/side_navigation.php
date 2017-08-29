@@ -30,7 +30,7 @@
             <li class="with-sub">
               <a href="#" aria-haspopup="true">
                 <span class="menu-icon">
-                  <i class="zmdi zmdi-border-all"></i>
+                  <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>
                 </span>
                 <span class="menu-text">Users</span>
               </a>
@@ -44,7 +44,7 @@
             <li  class="<?php if($page_name == 'banners.php') { echo "active"; } ?>">
               <a href="banners.php" aria-haspopup="true">
                 <span class="menu-icon">
-                   <i class="zmdi zmdi-border-all"></i> 
+                   <i class="zmdi zmdi-collection-image zmdi-hc-fw"></i>
                 </span> 
                 <span class="menu-text">Banners</span>
               </a>
