@@ -27,7 +27,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 	}
 
 } else {
-
 	//echo "<script language=javascript>alert('Invalid Request!')</script>";
     echo "<script type='text/javascript'>window.location='index.php?error=invalid'</script>";
 }

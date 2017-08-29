@@ -54,11 +54,9 @@
           <?php } else { ?>
            <h3 class="m-y-0">Login</h3>
           <?php } ?>
-          <!-- end error message -->
-           
+          <!-- end error message -->           
 
           </div>
-
           
           <div class="panel-body" style="height: 250px;">
             <div class="row">

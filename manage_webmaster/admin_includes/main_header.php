@@ -55,15 +55,7 @@ if(!isset($_SESSION['admin_user_id'])) {
             <button class="navbar-toggler right-sidebar-toggle pull-right hidden-xs" type="button">
               <i class="zmdi zmdi-long-arrow-left"></i>
               <div class="dot bg-danger"></div>
-            </button>
-            <ul class="nav navbar-nav">
-              <li class="visible-xs-block">
-                <div class="nav-avatar">
-                  <img class="img-circle" src="img/avatars/1.jpg" alt="" width="48" height="48">
-                </div>
-                <h4 class="navbar-text text-center">Welcome, Jon Snow!</h4>
-              </li>
-            </ul>
+            </button>            
             
             <ul class="nav navbar-nav navbar-right">              
               <li class="nav-table dropdown hidden-sm-down">
@@ -71,7 +63,7 @@ if(!isset($_SESSION['admin_user_id'])) {
                   <span class="nav-cell p-r-10">
                     <img class="img-circle" src="img/avatars/1.jpg" alt="" width="32" height="32">
                   </span>
-                  <span class="nav-cell">Jon Snow
+                  <span class="nav-cell"><?php echo $_SESSION['admin_user_name']; ?>
                     <span class="caret"></span>
                   </span>
                 </a>
