@@ -5,6 +5,7 @@
         
         <div class="panel panel-default panel-table">
           <div class="panel-heading">
+            <a href="add_banners.php" style="float:right">Add Banners</a>
             <h3 class="m-t-0 m-b-5">Banners</h3>            
           </div>
           <div class="panel-body">
