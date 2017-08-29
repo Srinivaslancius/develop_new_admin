@@ -1,5 +1,5 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
-<?php $getUsersData = getDataFromTables('content_pages',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL); $i=1; ?>
+<?php $getUsersData = getAllDataWithActiveRecent('content_pages'); $i=1; ?>
      
       <div class="site-content">
         
