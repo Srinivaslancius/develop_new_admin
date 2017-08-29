@@ -2,6 +2,8 @@
 ob_start();
 include_once('admin_includes/config.php');
 include_once('admin_includes/common_functions.php');
+$getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$id=1,$activeStatus=NULL,$activeTop=NULL); 
+$getSiteSettingsData = $getSiteSettings->fetch_assoc();
 
 if(!isset($_SESSION['admin_user_id'])) {
    // header("Location: logout.php");
@@ -31,7 +33,7 @@ if(!isset($_SESSION['admin_user_id'])) {
       <nav class="navbar navbar-default">
         <div class="navbar-header">
           <a class="navbar-brand" href="dashboard.php">
-            <img src="img/logo.png" alt="" height="25">
+            <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" alt="" height="20">
             <span>cosmos</span>
           </a>
           <button class="navbar-toggler left-sidebar-toggle pull-left visible-xs" type="button">
