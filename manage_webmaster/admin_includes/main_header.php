@@ -2,6 +2,8 @@
 ob_start();
 include_once('admin_includes/config.php');
 include_once('admin_includes/common_functions.php');
+$getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$id=1,$activeStatus=NULL,$activeTop=NULL); 
+$getSiteSettingsData = $getSiteSettings->fetch_assoc();
 
 if(!isset($_SESSION['admin_user_id'])) {
    // header("Location: logout.php");
@@ -17,7 +19,7 @@ if(!isset($_SESSION['admin_user_id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
-    <title>Cosmos</title>
+    <title><?php echo $getSiteSettingsData['admin_title'];?></title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
@@ -31,8 +33,8 @@ if(!isset($_SESSION['admin_user_id'])) {
       <nav class="navbar navbar-default">
         <div class="navbar-header">
           <a class="navbar-brand" href="dashboard.php">
-            <img src="img/logo.png" alt="" height="25">
-            <span>cosmos</span>
+            <img src="<?php echo $getSiteSettingsData['logo'];?>" alt="" height="25">
+            <span><?php echo $getSiteSettingsData['admin_title'];?></span>
           </a>
           <button class="navbar-toggler left-sidebar-toggle pull-left visible-xs" type="button">
             <span class="hamburger"></span>
