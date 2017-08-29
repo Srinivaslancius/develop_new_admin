@@ -389,7 +389,7 @@
             <div class="widget widget-tile-2 bg-danger m-b-30">
               <div class="wt-content p-a-20 p-b-50">
                 <div class="wt-title">Orders</div>
-                <div class="wt-number">75%</div>
+                <div class="wt-number"><?php echo getRowsCount('orders')?></div>
               </div>
               <div class="wt-icon">
                 <i class="zmdi zmdi-email-open"></i>
@@ -400,7 +400,7 @@
             <div class="widget widget-tile-2 bg-danger m-b-30">
               <div class="wt-content p-a-20 p-b-50">
                 <div class="wt-title">Products</div>
-                <div class="wt-number">75%</div>
+                <div class="wt-number"><?php echo getRowsCount('products')?></div>
               </div>
               <div class="wt-icon">
                 <i class="zmdi zmdi-email-open"></i>

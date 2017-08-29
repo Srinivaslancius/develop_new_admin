@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 include_once('admin_includes/config.php');
 include_once('admin_includes/common_functions.php');
 //session_start();
@@ -22,14 +22,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 		    echo "<script type='text/javascript'>window.location='dashboard.php'</script>";
 		}
 	} else {
-	    echo "<script language=javascript>alert('Entered Username or Password is incorrect!')</script>";
-	    echo "<script type='text/javascript'>window.location='index.php'</script>";
+	    //echo "<script language=javascript>alert('Entered Username or Password is incorrect!')</script>";
+	    echo "<script type='text/javascript'>window.location='index.php?error=fail'</script>";
 	}
 
 } else {
-
-	echo "<script language=javascript>alert('Invalid Request!')</script>";
-    echo "<script type='text/javascript'>window.location='index.php'</script>";
+	//echo "<script language=javascript>alert('Invalid Request!')</script>";
+    echo "<script type='text/javascript'>window.location='index.php?error=invalid'</script>";
 }
 
 ?>

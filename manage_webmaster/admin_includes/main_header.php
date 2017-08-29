@@ -3,7 +3,6 @@ ob_start();
 include_once('admin_includes/config.php');
 include_once('admin_includes/common_functions.php');
 $getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$id=1,$activeStatus=NULL,$activeTop=NULL); 
-$getLoginData= getDataFromTables('admin_users',$status=NULL,$clause='id',$id=$_SESSION['admin_user_id'],$activeStatus=NULL,$activeTop=NULL);
 $getSiteSettingsData = $getSiteSettings->fetch_assoc();
 
 if(!isset($_SESSION['admin_user_id'])) {
@@ -48,7 +47,6 @@ if(!isset($_SESSION['admin_user_id'])) {
             <span class="more"></span>
           </button>
         </div>
-      
         <div class="navbar-collapsible">
           <div id="navbar" class="navbar-collapse collapse">
             <button class="navbar-toggler left-sidebar-collapse pull-left hidden-xs" type="button">
@@ -58,14 +56,14 @@ if(!isset($_SESSION['admin_user_id'])) {
               <i class="zmdi zmdi-long-arrow-left"></i>
               <div class="dot bg-danger"></div>
             </button>
-            <ul class="nav navbar-nav">
+            <!-- <ul class="nav navbar-nav">
               <li class="visible-xs-block">
                 <div class="nav-avatar">
                   <img class="img-circle" src="img/avatars/1.jpg" alt="" width="48" height="48">
                 </div>
                 <h4 class="navbar-text text-center">Welcome, Jon Snow!</h4>
               </li>
-            </ul>
+            </ul> -->
             
             <ul class="nav navbar-nav navbar-right">              
               <li class="nav-table dropdown hidden-sm-down">
@@ -73,7 +71,7 @@ if(!isset($_SESSION['admin_user_id'])) {
                   <span class="nav-cell p-r-10">
                     <img class="img-circle" src="img/avatars/1.jpg" alt="" width="32" height="32">
                   </span>
-                  <span class="nav-cell">
+                  <span class="nav-cell">Jon Snow
                     <span class="caret"></span>
                   </span>
                 </a>
