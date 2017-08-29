@@ -12,7 +12,7 @@ $id = $_GET['bid'];
                                              
                 $fileToUpload = $_FILES["fileToUpload"]["name"];               
 
-                $target_dir = "uploads/banner_images/";
+                $target_dir = "../uploads/banner_images/";
                 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
                 $getImgUnlink = getImageUnlink('banner','banners','id',$id,$target_dir);
@@ -85,3 +85,6 @@ $getBanners = $getBannersData->fetch_assoc();
           </div>
         </div>
       </div>
+      <?php include_once 'admin_includes/footer.php'; ?>
+   <script src="js/tables-datatables.min.js"></script>
+
