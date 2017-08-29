@@ -29,7 +29,33 @@
                     <td><?php echo $row['admin_email'];?></td>
                     <td><?php echo $row['created_at'];?></td>                    
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-delete zmdi-hc-fw"></i> &nbsp;<i class="zmdi zmdi-eye zmdi-hc-fw"></i></td>
+                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-delete zmdi-hc-fw"></i> &nbsp;<i class="zmdi zmdi-eye zmdi-hc-fw" data-toggle="modal" data-target="#successModal2" class=""></i></td>
+
+                    <!-- Open Modal Box  here -->
+                    <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header bg-success">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">
+                                <i class="zmdi zmdi-close"></i>
+                              </span>
+                            </button>
+                            <h4 class="modal-title">Modal title</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia non massa a euismod. Nam bibendum mauris mollis, ultricies orci vitae, tristique est. Mauris pellentesque justo ut est fringilla imperdiet.</p>
+                            <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Modal Box  here -->
+                    
                   </tr>
                   <?php  $i++; } ?>                  
                 </tbody>                
