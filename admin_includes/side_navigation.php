@@ -19,6 +19,14 @@
                 <li class="<?php if($page_name == 'dashboard.php') { echo "active"; } ?>"><a href="dashboard.php">Dashboards</a></li>
               </ul>
             </li>
+            <li class="<?php if($page_name == 'site_settings.php') { echo "active"; } ?>">
+              <a href="site_settings.php" aria-haspopup="true">
+                <span class="menu-icon">
+                  <i class="zmdi zmdi-home"></i>
+                </span>
+                <span class="menu-text">Site Settings</span>
+              </a>
+            </li>
             <li class="with-sub">
               <a href="#" aria-haspopup="true">
                 <span class="menu-icon">
@@ -33,7 +41,7 @@
               </ul>
             </li>  
  
-            <li class="with-sub">
+            <li  class="<?php if($page_name == 'banners.php') { echo "active"; } ?>">
               <a href="banners.php" aria-haspopup="true">
                 <span class="menu-icon">
                    <i class="zmdi zmdi-border-all"></i> 
