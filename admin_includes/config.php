@@ -23,5 +23,5 @@ if ($conn->connect_error) {
 } 
 
 $base_url = "http://localhost/develop_new_admin/";
-//$base_url = "http://sampradayaruchulu.com/";
+
 ?>

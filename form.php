@@ -15,6 +15,7 @@
                     <input type="email" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter a valid email address." required>
                     <div class="help-block with-errors"></div>
                   </div>
+
                   <div class="form-group">
                     <label for="form-control-3" class="control-label">Choose counrty</label>
                     <select id="form-control-3" class="custom-select" data-error="This field is required." required>
@@ -28,7 +29,16 @@
                       <option value="7">Zimbabwe</option>
                     </select>
                     <div class="help-block with-errors"></div>
+                  </div>                  
+
+                  <div class="form-group">
+                    <label for="form-control-4" class="control-label">Banner</label>
+                    <label class="btn btn-default file-upload-btn">
+                        Choose file...
+                        <input id="form-control-22" class="file-upload-input" type="file" name="files[]" multiple="multiple">
+                      </label>
                   </div>
+
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">About You</label>
                     <textarea id="form-control-4" class="form-control" rows="3" data-error="This field is required." required></textarea>
