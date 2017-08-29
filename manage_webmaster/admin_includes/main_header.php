@@ -20,8 +20,8 @@ if(!isset($_SESSION['admin_user_id'])) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
     <title><?php echo $getSiteSettingsData['admin_title'];?></title>
-    <!-- <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"> -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/cosmos.min.css">
@@ -34,7 +34,7 @@ if(!isset($_SESSION['admin_user_id'])) {
         <div class="navbar-header">
           <a class="navbar-brand" href="dashboard.php">
             <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" height="20">
-            <span><?php echo $getSiteSettingsData['admin_title'];?></span>
+            <!-- <span><?php echo $getSiteSettingsData['admin_title'];?></span> -->
           </a>
           <button class="navbar-toggler left-sidebar-toggle pull-left visible-xs" type="button">
             <span class="hamburger"></span>
