@@ -38,7 +38,7 @@ $id = $_GET['uid'];
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Description</label>
-                    <textarea name="description" class="form-control" id="form-control-2" data-error="Please enter a valid email address." required><?php echo $getContents1['description'];?></textarea>
+                    <textarea name="description" class="form-control" id="description" data-error="Please enter a valid email address." required><?php echo $getContents1['description'];?></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
                   
