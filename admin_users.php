@@ -29,7 +29,7 @@
                     <td><?php echo $row['admin_email'];?></td>
                     <td><?php echo $row['created_at'];?></td>                    
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-edit"></i></td>
+                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-eye zmdi-hc-fw"></i></td>
                   </tr>
                   <?php  $i++; } ?>                  
                 </tbody>                
