@@ -11,8 +11,6 @@
     $twitter_link = $_POST['twitter_link'];
     $gplus_link = $_POST['gplus_link'];
     $mobile = $_POST['mobile'];
-    $delivery_charges = $_POST['delivery_charges'];
-    $packaging_charges = $_POST['packaging_charges'];
     $footer_text = $_POST['footer_text'];
     $address = $_POST['address'];
     if($_FILES["logo"]["name"]!='') {
@@ -32,7 +30,7 @@
         //Send parameters for img val,tablename,clause,id,imgpath for image ubnlink from folder
 
         if (move_uploaded_file($_FILES["logo"]["tmp_name"], $target_file)) {
-            $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile', delivery_charges='$delivery_charges',packaging_charges='$packaging_charges', logo = '$logo', footer_text='$footer_text', address='$address' WHERE id = '$id' ";
+            $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile', logo = '$logo', footer_text='$footer_text', address='$address' WHERE id = '$id' ";
             if($conn->query($sql) === TRUE){
                echo "<script>alert('Data Updated Successfully');window.location.href='site_settings.php';</script>";
             } else {
@@ -43,7 +41,7 @@
             echo "Sorry, there was an error uploading your file.";
         }
     }  else {
-        $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile',delivery_charges='$delivery_charges',packaging_charges='$packaging_charges', footer_text='$footer_text', address='$address' WHERE id = '$id' ";
+        $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile',footer_text='$footer_text', address='$address' WHERE id = '$id' ";
         if($conn->query($sql) === TRUE){
            echo "<script>alert('Data Updated Successfully');window.location.href='site_settings.php';</script>";
         } else {
@@ -100,26 +98,12 @@
                     <label for="form-control-2" class="control-label">Mobile</label>
                     <input type="text" name="mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['mobile'];?>" required>
                     <div class="help-block with-errors"></div>
-                  </div>
-
-                  <!-- <div class="form-group">
-                    <label for="form-control-3" class="control-label">Choose counrty</label>
-                    <select id="form-control-3" class="custom-select" data-error="This field is required." value="<?php echo $getSiteSettingsData['admin_title'];?>" required>
-                      <option value="" selected="selected">Choose counrty</option>
-                      <option value="1">Denmark</option>
-                      <option value="2">Iceland</option>
-                      <option value="3">Republic of Macedonia</option>
-                      <option value="4">Saint Kitts and Nevis</option>
-                      <option value="5">Vanuatu</option>
-                      <option value="6">Yemen</option>
-                      <option value="7">Zimbabwe</option>
-                    </select>
-                    <div class="help-block with-errors"></div>
-                  </div>  -->           
+                  </div>         
 
                   <div class="form-group">
                     <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" height="100" width="100" id="output"/>
                   </div>      
+
 
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">Banner</label>
