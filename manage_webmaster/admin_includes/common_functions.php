@@ -14,10 +14,10 @@
             $sql="select * from `$table` ORDER BY status, id DESC ";
         } elseif($table!='' && $table!=NULL) {
             //Get All Table Data (1)
-            $sql="select * from `$table` ";
+            $sql="select * from `$table` ORDER BY status, id DESC";
         }  else {
             //Last if fail then go to this 
-            $sql="select * from `$table` ";
+            $sql="select * from `$table` ORDER BY status, id DESC";
         } 
 
         $result = $conn->query($sql);         
