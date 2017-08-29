@@ -27,8 +27,7 @@
   
 
     /*Common function with where out where get all data from query */
-    function getAllDataWithActiveRecent($table)
-    {
+    function getAllDataWithActiveRecent($table)  {
         global $conn;
         $sql="select * from `$table` ORDER BY status, id DESC ";
         $result = $conn->query($sql);         
@@ -36,8 +35,7 @@
     }
 
     /* Common function for get count for rows */
-     function getRowsCount($table)
-    {
+     function getRowsCount($table)  {
         global $conn;
         $sql="select * from `$table` ";
         $result = $conn->query($sql);
@@ -46,21 +44,19 @@
     }
 
     /* encrypt and decrypt password */
-     function encryptPassword($pwd)
-    {
+     function encryptPassword($pwd) {
         $key = "123";
         $admin_pwd = bin2hex(openssl_encrypt($pwd,'AES-128-CBC', $key));    
         return $admin_pwd;
     }
 
-    function decryptPassword($admin_password)
-    {
+    function decryptPassword($admin_password) {
         $key = "123";
         $admin_pwd = openssl_decrypt(hex2bin($admin_password),'AES-128-CBC',$key);  
         return $admin_pwd;
     }
 
-    function getImageUnlink($val,$table,$clause,$id,$target_dir){
+    function getImageUnlink($val,$table,$clause,$id,$target_dir) {
         global $conn;
         $getBanner = "SELECT $val FROM $table WHERE $clause='$id' ";
         $getRes = $conn->query($getBanner);
