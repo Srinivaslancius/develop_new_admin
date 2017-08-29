@@ -23,7 +23,8 @@
               </a>
               <ul class="sidebar-submenu collapse">
                 <li class="menu-subtitle">Users</li>
-                <li><a href="admin_users.php">Admin Users</a></li>                
+                <li><a href="admin_users.php">Admin Users</a></li> 
+                <li><a href="users.php">Users</a></li>
               </ul>
             </li>  
           </ul>
