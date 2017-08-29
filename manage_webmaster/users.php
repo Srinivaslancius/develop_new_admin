@@ -29,7 +29,7 @@
                     <td><?php echo $row['user_email'];?></td>
                     <td><?php echo $row['user_mobile'];?></td>                    
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-eye zmdi-hc-fw"></i></td>
+                    <td> <a href="edit_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit"></i></a> &nbsp; <a href="#"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></a></td>
                   </tr>
                   <?php  $i++; } ?>                  
                 </tbody>                
