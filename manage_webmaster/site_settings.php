@@ -109,7 +109,7 @@
                     <label for="form-control-4" class="control-label">Banner</label>
                     <label class="btn btn-default file-upload-btn">
                         Choose file...
-                        <input name="logo" id="form-control-22" class="file-upload-input" type="file" multiple="multiple">
+                        <input name="logo" id="form-control-22" class="file-upload-input" type="file" multiple="multiple" onchange="loadFile(event)" accept="image/*">
                       </label>
                   </div>
 
