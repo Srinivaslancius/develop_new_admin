@@ -40,7 +40,7 @@
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Admin User Information</h4></center>
+                            <center><h4 class="modal-title">User Information</h4></center>
                           </div>
                         <div class="modal-body">
                            <div class="Name"><strong>Name: </strong>&nbsp<?php echo $row['user_name'];?> </div>
