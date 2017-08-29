@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 include_once('admin_includes/config.php');
 include_once('admin_includes/common_functions.php');
 //session_start();

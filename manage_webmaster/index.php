@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
-    <title>Cosmos</title>
+    <title>Admin Panel</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">    
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor.min.css">
@@ -19,7 +19,7 @@
           <div class="panel-heading">
             <h3 class="m-y-0">Login</h3>
           </div>
-          <div class="panel-body">
+          <div class="panel-body" style="height: 250px;">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                 <form autocomplete="off" method="post" action="login-script.php">
