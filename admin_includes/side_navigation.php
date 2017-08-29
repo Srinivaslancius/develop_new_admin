@@ -27,6 +27,17 @@
                 <li><a href="users.php">Users</a></li>
               </ul>
             </li>  
+ 
+            <li class="with-sub">
+              <a href="banners.php" aria-haspopup="true">
+                <span class="menu-icon">
+                   <i class="zmdi zmdi-border-all"></i> 
+                </span> 
+                <span class="menu-text">Banners</span>
+              </a>
+            </li>  
+
+
           </ul>
         </div>
       </div>
