@@ -9,7 +9,7 @@ if($setcon == 1) {
 	$password = "capital@123";
 	$dbname = "capitalsecure_latest";
 } else {
-	$servername = "192.168.0.109";	
+	$servername = "192.168.0.101";	
 	$username = "root";
 	$password = "root";
 	$dbname = "develop_new_admin";
@@ -22,6 +22,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$base_url = "http://localhost/develop_new_admin/";
+$base_url = "http://localhost:8012/develop_new_admin/";
 //$base_url = "http://sampradayaruchulu.com/";
 ?>
