@@ -29,7 +29,7 @@
                     <td><?php echo $row['admin_email'];?></td>
                     <td><?php echo $row['created_at'];?></td>                    
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td> <a href="edit_admin_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit"></i></a> &nbsp; <a href="delete_admin_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></a> &nbsp;<a href="#"><i class="zmdi zmdi-eye zmdi-hc-fw" data-toggle="modal" data-target="#successModal2" class=""></i></a></td>
+                    <td> <a href="edit_admin_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit"></i></a> &nbsp; <a href="delete_admin_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-delete zmdi-hc-fw" onclick="return confirm('Are you sure you want to delete?')"></i></a> &nbsp;<a href="#"><i class="zmdi zmdi-eye zmdi-hc-fw" data-toggle="modal" data-target="#successModal2" class=""></i></a></td>
                      <!-- Open Modal Box  here -->
                     <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
@@ -40,22 +40,29 @@
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Modal title</h4></center>
+                            <center><h4 class="modal-title">Admin User Information</h4></center>
                           </div>
                         <div class="modal-body">
 
-            						<div class="Name">Name: &nbsp&nbsp&nbsp&nbsp&nbspSwapna </div>
-            						  <div class="Email">Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbspswapnaireddy@gmail.com</div>
-            						  <div class="tel">Number: &nbsp&nbsp987654321</div>
-            						  <div class="Date">Date: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp28/08/2017</div>
-            						  <div class="Status">Status: &nbsp&nbsp&nbsp&nbsp&nbspActive </div>
-            						</div>
-                        <div class="modal-footer">
-                        <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
-                        <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
-          							
+              						 <div class="Name"><strong>Name: </strong>&nbsp<?php echo $row['admin_name'];?> </div>
+              						  <div class="Email"><strong>Email: </strong>&nbsp<?php echo $row['admin_email'];?></div>
+              						  <div class="tel"><strong>Created Date: </strong>&nbsp<?php echo $row['created_at'];?></div>
+                            <div class="tel"><strong>Status: </strong>&nbsp<?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
+              					</div>
+                          <div class="modal-footer">
+                          <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
+                          <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
+            							<style>
+            							.modal-body{
+            								font-size:15px;
+            								text-align:justify;
+            								padding-left:110px;
+            								padding-top:30px;
+            								font-family:Roboto,sans-serif;
+            							}
+            							</style>
                           </div>
-                        </div>
+                          </div>
                       </div>
                     </div>
                     <!-- End Modal Box  here -->
