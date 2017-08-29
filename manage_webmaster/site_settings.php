@@ -16,7 +16,7 @@
     if($_FILES["logo"]["name"]!='') {
                                           
         $logo = $_FILES["logo"]["name"];        
-        $target_dir = "uploads/logo/";
+        $target_dir = "../uploads/logo/";
         $target_file = $target_dir . basename($_FILES["logo"]["name"]);
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         // Allow certain file formats
@@ -60,11 +60,11 @@
           <div class="panel-body">            
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <form data-toggle="validator" method="post" enctype="multipart/form-data">
+                <?php $getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$id=1,$activeStatus=NULL,$activeTop=NULL); 
+                  $getSiteSettingsData = $getSiteSettings->fetch_assoc(); ?>
+                <form data-toggle="validator">
 
                   <div class="form-group">
-                    <?php $getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$id=1,$activeStatus=NULL,$activeTop=NULL); 
-                  $getSiteSettingsData = $getSiteSettings->fetch_assoc(); ?>
                     <label for="form-control-2" class="control-label">Admin Title</label>
                     <input type="text" name="admin_title" class="form-control" id="form-control-2" placeholder="Admin Title" data-error="Please enter a valid Title." value="<?php echo $getSiteSettingsData['admin_title'];?>" required>
                     <div class="help-block with-errors"></div>
@@ -109,7 +109,7 @@
                     <label for="form-control-4" class="control-label">Banner</label>
                     <label class="btn btn-default file-upload-btn">
                         Choose file...
-                        <input name="logo" id="form-control-22" class="file-upload-input" type="file" multiple="multiple">
+                        <input name="admin_title" id="form-control-22" class="file-upload-input" type="file" name="files[]" multiple="multiple">
                       </label>
                   </div>
 
@@ -121,10 +121,10 @@
 
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">Address</label>
-                    <textarea id="form-control-4" name="address" class="form-control" rows="3" data-error="This field is required."required><?php echo $getSiteSettingsData['address'];?></textarea>
+                    <textarea id="form-control-4" name="address" class="form-control" rows="3" data-error="This field is required." value="<?php echo $getSiteSettingsData['address'];?>" required></textarea>
                     <div class="help-block with-errors">Write some details about yourself.</div>
                   </div>
-                  <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
               </div>
             </div>
