@@ -12,7 +12,7 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Admin Title</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Admin Title" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Admin Title" data-error="Please enter a valid Title." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
@@ -24,25 +24,25 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Facebook Link</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Facebook Link" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Facebook Link" data-error="Please enter a valid Facebook Link." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Instagram Link</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Instagram Link" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Instagram Link" data-error="Please enter a valid Instagram Link." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Youtube Link</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Youtube Link" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Youtube Link" data-error="Please enter a valid Youtube Link." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Mobile</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter a valid Mobile." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
@@ -71,7 +71,7 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Footer Text</label>
-                    <input type="email" class="form-control" id="form-control-2" placeholder="Footer Text" data-error="Please enter a valid email address." required>
+                    <input type="text" class="form-control" id="form-control-2" placeholder="Footer Text" data-error="Please enter a valid Mobile." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
