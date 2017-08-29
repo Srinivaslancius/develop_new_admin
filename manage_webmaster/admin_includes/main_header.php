@@ -28,7 +28,7 @@ if(!isset($_SESSION['admin_user_id'])) {
   <body class="layout layout-header-fixed layout-left-sidebar-fixed">
     <div class="site-overlay"></div>
     <div class="site-header">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-default" style="background-color:#D4E6F1 !important;">
         <div class="navbar-header">
           <a class="navbar-brand" href="dashboard.php">
             <img src="img/logo.png" alt="" height="25">
