@@ -367,14 +367,10 @@
                     <i class="zmdi zmdi-caret-up"></i>
                   </span>
                 </div>
-                <div class="wt-number">175</div>
-                <div class="wt-text">Updated today at 14:57</div>
+                <div class="wt-number"><?php echo getRowsCount('users')?></div>
               </div>
               <div class="wt-icon">
                 <i class="zmdi zmdi-accounts"></i>
-              </div>
-              <div class="wt-chart">
-                <span id="peity-chart-1">7,3,8,4,4,8,10,3,4,5,9,2,5,1,4,2,9,8,2,1</span>
               </div>
             </div>
           </div>
@@ -382,14 +378,10 @@
             <div class="widget widget-tile-2 bg-warning m-b-30">
               <div class="wt-content p-a-20 p-b-50">
                 <div class="wt-title">Admin Users</div>
-                <div class="wt-number">$ 47,855</div>
-                <div class="wt-text">+17% from previous period</div>
+                <div class="wt-number"><?php echo getRowsCount('admin_users')?></div>
               </div>
               <div class="wt-icon">
-                <i class="zmdi zmdi-shopping-basket"></i>
-              </div>
-              <div class="wt-chart">
-                <span id="peity-chart-2">7,3,8,4,4,8,10,3,4,5,9,2,5,1,4,2,9,8,5,9</span>
+                <i class="zmdi zmdi-accounts"></i>
               </div>
             </div>
           </div>
@@ -398,13 +390,9 @@
               <div class="wt-content p-a-20 p-b-50">
                 <div class="wt-title">Orders</div>
                 <div class="wt-number">75%</div>
-                <div class="wt-text">Updated: 09:26 AM</div>
               </div>
               <div class="wt-icon">
                 <i class="zmdi zmdi-email-open"></i>
-              </div>
-              <div class="wt-chart">
-                <span id="peity-chart-3">0,1,2,3,2,1,5,6,7,3,8,9,10,9,8,12,15,11,15,17</span>
               </div>
             </div>
           </div>
@@ -413,13 +401,9 @@
               <div class="wt-content p-a-20 p-b-50">
                 <div class="wt-title">Products</div>
                 <div class="wt-number">75%</div>
-                <div class="wt-text">Updated: 09:26 AM</div>
               </div>
               <div class="wt-icon">
                 <i class="zmdi zmdi-email-open"></i>
-              </div>
-              <div class="wt-chart">
-                <span id="peity-chart-3">0,1,2,3,2,1,5,6,7,3,8,9,10,9,8,12,15,11,15,17</span>
               </div>
             </div>
           </div>

@@ -15,6 +15,14 @@
               </ul>
             </li>
             <li class="with-sub">
+              <a href="site_settings.php" aria-haspopup="true">
+                <span class="menu-icon">
+                  <i class="zmdi zmdi-home"></i>
+                </span>
+                <span class="menu-text">Site Settings</span>
+              </a>
+            </li>
+            <li class="with-sub">
               <a href="#" aria-haspopup="true">
                 <span class="menu-icon">
                   <i class="zmdi zmdi-border-all"></i>
