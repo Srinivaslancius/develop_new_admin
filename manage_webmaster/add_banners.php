@@ -73,13 +73,7 @@
         </div>
       </div>
 
-      <script type="text/javascript">
-            $(document).ready(function(){
-                $(".click_view").click(function(){
-                    var modalId = $(this).attr('data-modalId');
-                    $("#myModal_"+modalId).modal('show');  
-                });                  
-            });
+      
        
 
       
