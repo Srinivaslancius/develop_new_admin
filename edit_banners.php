@@ -1,22 +1,25 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
 
-<?php  if (!isset($_POST['submit']))  {
+<?php  
+$id = $_GET['bid'];
+ if (!isset($_POST['submit']))  {
             echo "";
-        } else  {
+    } else  {            
 
-
-            $title = $_POST['title'];
-            $fileToUpload = $_FILES["fileToUpload"]["name"];
             $status = $_POST['status'];
-            
-            if($fileToUpload!='') {
+            $title = $_POST['title'];
+            if($_FILES["fileToUpload"]["name"]!='') {
+                                             
+                $fileToUpload = $_FILES["fileToUpload"]["name"];               
 
                 $target_dir = "uploads/banner_images/";
                 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                $getImgUnlink = getImageUnlink('banner','banners','id',$id,$target_dir);
+                //Send parameters for img val,tablename,clause,id,imgpath for image ubnlink from folder
 
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "INSERT INTO banners (`title`, `banner`, `status`) VALUES ('$title', '$fileToUpload','$status')";
+                    $sql = "UPDATE `banners` SET title = '$title', banner = '$fileToUpload', status='$status' WHERE id = '$id' ";
                     if($conn->query($sql) === TRUE){
                        echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
                     } else {
@@ -26,11 +29,21 @@
                 } else {
                     echo "Sorry, there was an error uploading your file.";
                 }
-            }            
+            }  else {
+                $sql = "UPDATE `banners` SET title = '$title', status='$status' WHERE id = '$id' ";
+                if($conn->query($sql) === TRUE){
+                   echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
+                } else {
+                   echo "<script>alert('Data Updation Failed');window.location.href='banners.php';</script>";
+                }
+            }   
             
         }
 ?>
-		<div class="site-content">
+<?php $getBannersData = getDataFromTables('banners',$status=NULL,'id',$id,$activeStatus=NULL,$activeTop=NULL); 
+$getBanners = $getBannersData->fetch_assoc();
+ ?>
+<div class="site-content">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="m-y-0">Banners</h3>
@@ -42,23 +55,23 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Title</label>
-                    <input type="text" class="form-control" id="form-control-2" name="title" placeholder="Title" data-error="Please enter title." required>
+                    <input type="text" class="form-control" id="form-control-2" name="title" required value="<?php echo $getBanners['title'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
-				  <div class="form-group">
+                  <div class="form-group">
                     <label for="form-control-4" class="control-label">Banner</label>
-                    <img id="output" height="100" width="100"/>
+                    <img src="<?php echo $base_url . 'uploads/banner_images/'.$getBanners['banner'] ?>"  id="output" height="100" width="100"/>
                     <label class="btn btn-default file-upload-btn">
-						Choose file...
-                          <input id="form-control-22" class="file-upload-input" type="file" accept="image/*" name="fileToUpload" id="fileToUpload"  onchange="loadFile(event)"  multiple="multiple" >
+                        Choose file...
+                        <input id="form-control-22" class="file-upload-input" type="file" accept="image/*" name="fileToUpload" id="fileToUpload"  onchange="loadFile(event)"  multiple="multiple" >
                       </label>
                   </div>
-				  <div class="form-group">
+                  <div class="form-group">
                     <label for="form-control-3" class="control-label">Choose your status</label>
                     <select id="form-control-3" name="status" class="custom-select" data-error="This field is required." required>
-                      <option value="" selected="selected">Choose your status</option>
-                      <option value="1">Active</option>
-                      <option value="2">In Active</option>
+                      <!-- <option value="" selected="selected">Choose your status</option> -->
+                      <option value="1"<?php if($getBanners['status'] == 1) { echo "Selected"; }?>>Active</option>
+                      <option value="2"<?php if($getBanners['status'] == 2) { echo "Selected"; }?>>In Active</option>
                       
                     </select>
                     <div class="help-block with-errors"></div>
@@ -72,23 +85,3 @@
           </div>
         </div>
       </div>
-
-      <script type="text/javascript">
-            $(document).ready(function(){
-                $(".click_view").click(function(){
-                    var modalId = $(this).attr('data-modalId');
-                    $("#myModal_"+modalId).modal('show');  
-                });                  
-            });
-       
-
-      
-      
-
-      
-
-
-
-
-
-

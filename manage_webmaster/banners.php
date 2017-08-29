@@ -26,8 +26,8 @@
                      <td><?php echo $i;?></td>
                     <td><?php echo $row['title'];?></td>
                     <td><img src="<?php echo $base_url . 'uploads/banner_images/'.$row['banner'] ?>" height="100" width="100"/></td>                    
-                    <td><?php if ($row['status']==1) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
-                    <td> <a href="edit_banners.php?bid=<?php echo $row['id']; ?>"> <i class="zmdi zmdi-edit"></i> &nbsp; </a> <a href="delete_banners.php?bid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit" onclick="return confirm('Are you sure you want to delete?')"></i></a></td> 
+                    <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
+                    <td> <i class="zmdi zmdi-edit"></i> &nbsp; <i class="zmdi zmdi-delete zmdi-hc-fw"></i></td> 
                   </tr>
                   <?php  $i++; } ?>                  
                 </tbody>                
