@@ -72,31 +72,31 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter a valid email address." value="<?php echo $getSiteSettingsData['email'];?>" required>
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter a valid email address." value="<?php echo $getSiteSettingsData['email'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Facebook Link</label>
-                    <input type="text" name="fb_link" class="form-control" id="form-control-2" placeholder="Facebook Link" data-error="Please enter a valid Facebook Link." value="<?php echo $getSiteSettingsData['fb_link'];?>" required>
+                    <input type="url" name="fb_link" class="form-control" id="form-control-2" placeholder="Facebook Link" data-error="Please enter a valid Facebook Link." value="<?php echo $getSiteSettingsData['fb_link'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Instagram Link</label>
-                    <input type="text" name="twitter_link" class="form-control" id="form-control-2" placeholder="Instagram Link" data-error="Please enter a valid Instagram Link." value="<?php echo $getSiteSettingsData['twitter_link'];?>" required>
+                    <input type="url" name="twitter_link" class="form-control" id="form-control-2" placeholder="Instagram Link" data-error="Please enter a valid Instagram Link." value="<?php echo $getSiteSettingsData['twitter_link'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Youtube Link</label>
-                    <input type="text" name="gplus_link" class="form-control" id="form-control-2" placeholder="Youtube Link" data-error="Please enter a valid Youtube Link." value="<?php echo $getSiteSettingsData['gplus_link'];?>" required>
+                    <input type="url" name="gplus_link" class="form-control" id="form-control-2" placeholder="Youtube Link" data-error="Please enter a valid Youtube Link." value="<?php echo $getSiteSettingsData['gplus_link'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Mobile</label>
-                    <input type="text" name="mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['mobile'];?>" required>
+                    <input type="text" name="mobile" class="form-control" id="form-control-2" maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" placeholder="Mobile" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['mobile'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>         
 
