@@ -43,25 +43,26 @@
                             <center><h4 class="modal-title">Admin User Information</h4></center>
                           </div>
                         <div class="modal-body">
+
               						 <div class="Name"><strong>Name: </strong>&nbsp<?php echo $row['admin_name'];?> </div>
               						  <div class="Email"><strong>Email: </strong>&nbsp<?php echo $row['admin_email'];?></div>
               						  <div class="tel"><strong>Created Date: </strong>&nbsp<?php echo $row['created_at'];?></div>
                             <div class="tel"><strong>Status: </strong>&nbsp<?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
               					</div>
-                        <div class="modal-footer">
-                        <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
-                        <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
-          							<style>
-          							.modal-body{
-          								font-size:15px;
-          								text-align:justify;
-          								padding-left:110px;
-          								padding-top:30px;
-          								font-family:Roboto,sans-serif;
-          							}
-          							</style>
+                          <div class="modal-footer">
+                          <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
+                          <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
+            							<style>
+            							.modal-body{
+            								font-size:15px;
+            								text-align:justify;
+            								padding-left:110px;
+            								padding-top:30px;
+            								font-family:Roboto,sans-serif;
+            							}
+            							</style>
                           </div>
-                        </div>
+                          </div>
                       </div>
                     </div>
                     <!-- End Modal Box  here -->

@@ -121,8 +121,7 @@
 
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">Address</label>
-                    <textarea id="form-control-4" name="address" class="form-control" rows="3" data-error="This field is required."required><?php echo $getSiteSettingsData['address'];?></textarea>
-                    <div class="help-block with-errors">Write some details about yourself.</div>
+                    <input type="text" name="address" class="form-control" id="form-control-2" placeholder="Address" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['address'];?>" required>
                   </div>
                   <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">Submit</button>
                 </form>

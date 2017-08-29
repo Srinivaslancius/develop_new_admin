@@ -3,7 +3,7 @@
  $getBannersData = getDataFromTables('banners',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);  
 $id = $_GET['bid'];
 //echo $music_number;
-$target_dir = 'uploads/banner_images/';
+$target_dir = '../uploads/banner_images/';
 $getImgUnlink = getImageUnlink('banner','banners','id',$id,$target_dir);
 $qry = "DELETE FROM banners WHERE id ='$id'";
 $result = $conn->query($qry);

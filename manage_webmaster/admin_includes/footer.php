@@ -21,5 +21,13 @@
           
     </script>
   </body>
-
+<style>
+.modal-body{
+  font-size:15px;
+  text-align:justify;
+  padding-left:110px;
+  padding-top:30px;
+  font-family:Roboto,sans-serif;
+}
+</style>
 </html>

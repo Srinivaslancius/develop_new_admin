@@ -47,6 +47,15 @@
               </a>
             </li>  
 
+            <li  class="<?php if($page_name == 'content_pages.php') { echo "active"; } ?>">
+              <a href="content_pages.php" aria-haspopup="true">
+                <span class="menu-icon">
+                   <i class="zmdi zmdi-collection-item  zmdi-hc-fw"></i>
+                </span> 
+                <span class="menu-text">Content Pages</span>
+              </a>
+            </li>
+
 
           </ul>
         </div>
