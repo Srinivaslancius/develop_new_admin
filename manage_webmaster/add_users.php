@@ -16,10 +16,9 @@ if (!isset($_POST['submit']))  {
     $location = $_POST['location'];
     $landmark = $_POST['landmark'];
     $pincode = $_POST['pincode'];
-    $created_admin_id = $_SESSION['admin_user_id'];
     $created_at = date("Y-m-d h:i:s");
     
-    $sql = "INSERT INTO users (`user_name`, `user_email`, `user_mobile`,`street_name`,`street_no`,`flat_name`,`flat_no`,`location`,`landmark`,`pincode`,`created_admin_id`, `created_at`, `status`) VALUES ('$user_name', '$user_email', '$user_mobile','$street_name','$street_no','$flat_name','$flat_no','$location','$landmark','$pincode', '$created_admin_id', '$created_at', 0)";
+    $sql = "INSERT INTO users (`user_name`, `user_email`, `user_mobile`,`street_name`,`street_no`,`flat_name`,`flat_no`,`location`,`landmark`,`pincode`,`created_admin_id`, `created_at`, `status`) VALUES ('$user_name', '$user_email', '$user_mobile','$street_name','$street_no','$flat_name','$flat_no','$location','$landmark','$pincode', 1, '$created_at', 0)";
     if($conn->query($sql) === TRUE){
        echo "<script>alert('Data Updated Successfully');window.location.href='users.php';</script>";
     } else {
@@ -30,7 +29,7 @@ if (!isset($_POST['submit']))  {
       <div class="site-content">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="m-y-0">Admin Users</h3>
+            <h3 class="m-y-0">Users</h3>
           </div>
           <div class="panel-body">            
             <div class="row">
