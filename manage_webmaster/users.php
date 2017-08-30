@@ -27,13 +27,15 @@
                     <td><?php echo $i;?></td>
                     <td><?php echo $row['user_name'];?></td>
                     <td><?php echo $row['user_email'];?></td>
-                    <td><?php echo $row['user_mobile'];?></td>                    
-                    <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success'>Active</span>" ;} else{ echo "<span class='label label-outline-info'>In Active</span>" ;}?></td>
+                    <td><?php echo $row['user_mobile'];?></td> 
+
+                   <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success check_active open_cursor' data-incId=".$row['id']." data-status=".$row['status']." data-tbname='users'>Active</span>" ;} else { echo "<span class='label label-outline-info check_active open_cursor' data-status=".$row['status']." data-incId=".$row['id']." data-tbname='users'>In Active</span>" ;} ?></td>
+
                     <td> <a href="edit_users.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit"></i></a> &nbsp; <a href="#"><i class="zmdi zmdi-eye zmdi-hc-fw" data-toggle="modal" data-target="#successModal2" class=""></i></a></td>
                     <!-- Open Modal Box  here -->
                     <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">

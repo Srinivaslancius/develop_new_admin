@@ -27,6 +27,29 @@
         output.src = URL.createObjectURL(event.target.files[0]);
       };
           
+      //check status active or not
+        $(".check_active").click(function(){
+          var check_active_id = $(this).attr("data-incId");
+          var table_name = $(this).attr("data-tbname");          
+          var current_status = $(this).attr("data-status");
+          if(current_status == 0) {
+            send_status = 1;
+          } else {
+            send_status = 0;
+          }
+          $.ajax({
+            type:"post",
+            url:"changestatus.php",
+            data:"check_active_id="+check_active_id+"&table_name="+table_name+"&send_status="+send_status,              
+            success:function(result){  
+              if(result ==1) {
+                alert("Your Status Updated!");
+                location.reload();
+              }
+            }
+          });
+                  
+        }); 
     </script>
   </body>
 <style>
@@ -36,6 +59,9 @@
   padding-left:110px;
   padding-top:30px;
   font-family:Roboto,sans-serif;
+}
+.open_cursor {
+  cursor: pointer !important;
 }
 </style>
 </html>

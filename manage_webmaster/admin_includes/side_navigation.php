@@ -33,8 +33,8 @@
               </a>
               <ul class="sidebar-submenu collapse">
                 <li class="menu-subtitle">Users</li>
-                <li class="<?php if($page_name == 'admin_users.php') { echo "active"; } ?>"><a href="admin_users.php">Admin Users</a></li> 
-                <li class="<?php if($page_name == 'users.php') { echo "active"; } ?>"><a href="users.php">Users</a></li>
+                <li class="<?php if($page_name == 'admin_users.php' || $page_name == 'add_admin_users.php' || $page_name == 'edit_admin_users.php') { echo "active"; } ?>"><a href="admin_users.php">Admin Users</a></li> 
+                <li class="<?php if($page_name == 'users.php' || $page_name == 'add_users.php' || $page_name == 'edit_users.php') { echo "active"; } ?>"><a href="users.php">Users</a></li>
               </ul>
             </li>  
  
@@ -73,7 +73,6 @@
                 <span class="menu-text">Orders</span>
               </a>
             </li> 
-
 
           </ul>
         </div>
