@@ -101,7 +101,7 @@
                   </div>         
 
                   <div class="form-group">
-                    <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" height="100" width="100" id="output"/>
+                    <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" accept="image/*" height="100" width="100" id="output"/>
                   </div>      
 
 
@@ -121,7 +121,7 @@
 
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">Address</label>
-                    <input type="text" name="address" class="form-control" id="form-control-2" placeholder="Address" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['address'];?>" required>
+                    <textarea type="text" name="address" class="form-control" id="form-control-2" placeholder="Address" data-error="Please enter a valid Mobile." required><?php echo $getSiteSettingsData['address'];?></textarea>
                   </div>
                   <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
