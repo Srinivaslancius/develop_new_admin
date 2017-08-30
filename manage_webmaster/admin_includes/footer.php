@@ -13,6 +13,14 @@
 	    return true;
 	}
 	</script>
+  <script type="text/javascript">
+            //$(document).ready(function(){
+                $(".click_view").click(function(){
+                    var modalId = $(this).attr('data-modalId');
+                    $("#myModal_"+modalId).modal('show');  
+                });                  
+            //});
+  </script>
 	<script>
       var loadFile = function(event) {
         var output = document.getElementById('output');
