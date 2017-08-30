@@ -71,9 +71,9 @@
                           <div class="modal-dialog" Style="margin-top:10%;">
                               <div class="modal-content">
                                   <div class="modal-header">
-                                  <h3 class="modal-title"><b>Order Information</b></h3>
+                                  <h3 class="modal-title" style="text-align: center;"><b>Order Information</b></h3>
                                   </div>
-                                  <div class="modal-body" >
+                                  <div class="modal-body" style="padding-left: 15px;padding-top: 5px">
                                   
                                       <div class="table1" style="width:100%">
 
