@@ -6,8 +6,8 @@ $getSiteSettings = getDataFromTables('site_settings',$status=NULL,$clause='id',$
 $getSiteSettingsData = $getSiteSettings->fetch_assoc();
 
 if(!isset($_SESSION['admin_user_id'])) {
-   // header("Location: logout.php");
-    //exit;
+  header("Location: logout.php");
+  exit;
 }
 ?>
 
