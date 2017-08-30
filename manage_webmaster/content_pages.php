@@ -33,18 +33,18 @@
                     <!-- Open Modal Box  here -->
                     <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Modal title</h4></center>
+                            <center><h4 class="modal-title">ContentPage Information</h4></center>
                           </div>
                         <div class="modal-body">
-                         <div class="Title"><strong>Title:</strong>&nbsp<?php echo $row['title'];?> </div>
-                          <div class="Description"><strong>Description:</strong>&nbsp<?php echo $row['description'];?> </div>
+                         <div class="Title"><strong>Title:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['title'];?> </div>
+                          <div class="Description"><strong>Description:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['description'];?> </div>
                         </div>
                         <div class="modal-footer">
                         <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->

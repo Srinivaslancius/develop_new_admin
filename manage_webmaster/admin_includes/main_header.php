@@ -81,3 +81,38 @@ if(!isset($_SESSION['admin_user_id'])) {
     </div>
   <div class="site-main">
     <?php include_once 'admin_includes/side_navigation.php'; ?>
+    <?php if(isset($_GET['msg']) && $_GET['msg']=='success') { ?>
+    <div class="col-sm-6 col-md-offset-5" style="margin-left:32.667% !important; margin-top:7px;">
+      <div class="alert alert-success alert-icon-bg alert-dismissable" role="alert" style="margin-bottom:-7px;">
+        <div class="alert-icon">
+          <i class="zmdi zmdi-check"></i>
+        </div>
+        <div class="alert-message">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="zmdi zmdi-close"></i>
+            </span>
+          </button>
+          <strong>Well done!</strong> You successfully updated data.
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <?php } elseif(isset($_GET['msg']) && $_GET['msg']=='fail') { ?>
+      <div class="alert alert-danger alert-icon-bg alert-dismissable" role="alert" style="margin-bottom:-7px;">
+        <div class="alert-icon">
+          <i class="zmdi zmdi-check"></i>
+        </div>
+        <div class="alert-message">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="zmdi zmdi-close"></i>
+            </span>
+          </button>
+          <strong>Oops!</strong> You data updation failed.
+        </div>
+      </div>
+    </div>
+    <?php } else {  ?>
+    <div class="clearfix"></div>
+    <?php } ?>
