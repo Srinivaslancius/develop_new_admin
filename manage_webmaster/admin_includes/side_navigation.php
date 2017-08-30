@@ -33,8 +33,8 @@
               </a>
               <ul class="sidebar-submenu collapse">
                 <li class="menu-subtitle">Users</li>
-                <li class="<?php if($page_name == 'admin_users.php' || $page_name == 'add_admin_users.php') { echo "active"; } ?>"><a href="admin_users.php">Admin Users</a></li> 
-                <li class="<?php if($page_name == 'users.php' || $page_name == 'add_users.php') { echo "active"; } ?>"><a href="users.php">Users</a></li>
+                <li class="<?php if($page_name == 'admin_users.php' || $page_name == 'add_admin_users.php' || $page_name == 'edit_admin_users.php') { echo "active"; } ?>"><a href="admin_users.php">Admin Users</a></li> 
+                <li class="<?php if($page_name == 'users.php' || $page_name == 'add_users.php' || $page_name == 'edit_users.php') { echo "active"; } ?>"><a href="users.php">Users</a></li>
               </ul>
             </li>  
  
@@ -56,6 +56,23 @@
               </a>
             </li>
 
+            <li  class="<?php if($page_name == 'products.php') { echo "active"; } ?>">
+              <a href="products.php" aria-haspopup="true">
+                <span class="menu-icon">
+                   <i class="zmdi zmdi-collection-image zmdi-hc-fw"></i>
+                </span> 
+                <span class="menu-text">Products</span>
+              </a>
+            </li>
+
+            <li  class="<?php if($page_name == 'orders.php') { echo "active"; } ?>">
+              <a href="orders.php" aria-haspopup="true">
+                <span class="menu-icon">
+                   <i class="zmdi zmdi-collection-image zmdi-hc-fw"></i>
+                </span> 
+                <span class="menu-text">Orders</span>
+              </a>
+            </li> 
 
           </ul>
         </div>

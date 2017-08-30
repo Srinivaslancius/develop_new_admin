@@ -53,16 +53,17 @@
                           <input id="form-control-22" class="file-upload-input" type="file" accept="image/*" name="fileToUpload" id="fileToUpload"  onchange="loadFile(event)"  multiple="multiple" required >
                       </label>
                   </div>
-				  <div class="form-group">
+				          <?php $getStatus = getDataFromTables('user_status',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);?>
+                  <div class="form-group">
                     <label for="form-control-3" class="control-label">Choose your status</label>
                     <select id="form-control-3" name="status" class="custom-select" data-error="This field is required." required>
-                      <option value="" selected="selected">Choose your status</option>
-                      <option value="1">Active</option>
-                      <option value="2">In Active</option>
-                      
-                    </select>
+                      <option value="">Select Status</option>
+                      <?php while($row = $getStatus->fetch_assoc()) {  ?>
+                          <option value="<?php echo $row['id']; ?>"><?php echo $row['status']; ?></option>
+                      <?php } ?>
+                   </select>
                     <div class="help-block with-errors"></div>
-                  </div>  
+                  </div>                  
 
                   <button type="submit" name="submit" value="Submit"  class="btn btn-primary btn-block">Submit</button>
                 </form>
