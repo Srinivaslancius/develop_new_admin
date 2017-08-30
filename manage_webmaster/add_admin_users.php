@@ -12,9 +12,9 @@
       $status = $_POST['status'];
       $sql = "INSERT INTO admin_users (`admin_name`, `admin_email`, `admin_password`, `created_at`, `status`) VALUES ('$admin_name', '$admin_email', '$admin_password','$created_at','$status')";
       if($conn->query($sql) === TRUE){
-         echo "<script>alert('Data Updated Successfully');window.location.href='admin_users.php';</script>";
+         echo "<script type='text/javascript'>window.location='admin_users.php?msg=success'</script>";
       } else {
-         echo "<script>alert('Data Updation Failed');window.location.href='admin_users.php';</script>";
+         echo "<script type='text/javascript'>window.location='admin_users.php?msg=fail'</script>";
       }
   }
 ?>

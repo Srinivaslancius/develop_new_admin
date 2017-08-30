@@ -32,9 +32,9 @@
         if (move_uploaded_file($_FILES["logo"]["tmp_name"], $target_file)) {
             $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile', logo = '$logo', footer_text='$footer_text', address='$address' WHERE id = '$id' ";
             if($conn->query($sql) === TRUE){
-               echo "<script>alert('Data Updated Successfully');window.location.href='site_settings.php';</script>";
+               echo "<script type='text/javascript'>window.location='site_settings.php?msg=success'</script>";
             } else {
-               echo "<script>alert('Data Updation Failed');window.location.href='site_settings.php';</script>";
+               echo "<script type='text/javascript'>window.location='site_settings.php?msg=fail'</script>";
             }
             //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         } else {
@@ -43,9 +43,9 @@
     }  else {
         $sql = "UPDATE `site_settings` SET admin_title = '$admin_title', email='$email', fb_link='$fb_link', twitter_link='$twitter_link', gplus_link='$gplus_link', mobile='$mobile',footer_text='$footer_text', address='$address' WHERE id = '$id' ";
         if($conn->query($sql) === TRUE){
-           echo "<script>alert('Data Updated Successfully');window.location.href='site_settings.php';</script>";
+           echo "<script type='text/javascript'>window.location='site_settings.php?msg=success'</script>";
         } else {
-           echo "<script>alert('Data Updation Failed');window.location.href='site_settings.php';</script>";
+           echo "<script type='text/javascript'>window.location='site_settings.php?msg=fail'</script>";
         }
     }   
     

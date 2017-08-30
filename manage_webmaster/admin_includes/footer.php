@@ -50,6 +50,12 @@
           });
                   
         }); 
+      //Set time for messge notifications
+      $(document).ready(function () {
+        setTimeout(function () {
+            $('#set_valid_msg').hide();
+        }, 2000);
+      });
     </script>
   </body>
 <style>
