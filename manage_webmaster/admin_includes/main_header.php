@@ -82,7 +82,7 @@ if(!isset($_SESSION['admin_user_id'])) {
   <div class="site-main">
     <?php include_once 'admin_includes/side_navigation.php'; ?>
     <?php if(isset($_GET['msg']) && $_GET['msg']=='success') { ?>
-    <div class="col-sm-6 col-md-offset-5" style="margin-left:32.667% !important; margin-top:7px;">
+    <div class="col-sm-6 col-md-offset-5" style="margin-left:32.667% !important; margin-top:7px;" id="set_valid_msg">
       <div class="alert alert-success alert-icon-bg alert-dismissable" role="alert" style="margin-bottom:-7px;">
         <div class="alert-icon">
           <i class="zmdi zmdi-check"></i>
@@ -93,12 +93,13 @@ if(!isset($_SESSION['admin_user_id'])) {
               <i class="zmdi zmdi-close"></i>
             </span>
           </button>
-          <strong>Well done!</strong> You successfully updated data.
+          <strong>Well done!</strong> You data updated successfully  .
         </div>
       </div>
     </div>
     <div class="clearfix"></div>
     <?php } elseif(isset($_GET['msg']) && $_GET['msg']=='fail') { ?>
+    <div class="col-sm-6 col-md-offset-5" style="margin-left:32.667% !important; margin-top:7px;" id="set_valid_msg">
       <div class="alert alert-danger alert-icon-bg alert-dismissable" role="alert" style="margin-bottom:-7px;">
         <div class="alert-icon">
           <i class="zmdi zmdi-check"></i>
@@ -113,6 +114,8 @@ if(!isset($_SESSION['admin_user_id'])) {
         </div>
       </div>
     </div>
-    <?php } else {  ?>
     <div class="clearfix"></div>
-    <?php } ?>
+  <?php } else {  ?>
+  <div class="clearfix"></div>
+  <?php } ?>
+  
