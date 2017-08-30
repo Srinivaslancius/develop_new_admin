@@ -40,7 +40,7 @@
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Modal title</h4></center>
+                            <center><h4 class="modal-title">Product Information</h4></center>
                           </div>
                         <div class="modal-body">
                          <div class="Title"><strong>Product Name:</strong>&nbsp<?php echo $row['product_name'];?> </div>
