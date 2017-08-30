@@ -93,7 +93,7 @@ if(!isset($_SESSION['admin_user_id'])) {
               <i class="zmdi zmdi-close"></i>
             </span>
           </button>
-          <strong>Well done!</strong> You data updated successfully  .
+          <strong>Well done!</strong> Your data updated successfully  .
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ if(!isset($_SESSION['admin_user_id'])) {
               <i class="zmdi zmdi-close"></i>
             </span>
           </button>
-          <strong>Oops!</strong> You data updation failed.
+          <strong>Oops!</strong> Your data updation failed.
         </div>
       </div>
     </div>
@@ -118,4 +118,3 @@ if(!isset($_SESSION['admin_user_id'])) {
   <?php } else {  ?>
   <div class="clearfix"></div>
   <?php } ?>
-  
