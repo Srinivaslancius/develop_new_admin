@@ -19,9 +19,9 @@ $id = $_GET['uid'];
             
             $sql = "UPDATE `users` SET user_name='$user_name', user_email='$user_email', user_mobile='$user_mobile',street_name= '$street_name',street_no = '$street_no',flat_name = '$flat_name',flat_no = '$flat_no',location = '$location',landmark = '$landmark',pincode = '$pincode',status = '$status' WHERE id = '$id' ";
             if($conn->query($sql) === TRUE){
-               echo "<script>alert('Data Updated Successfully');window.location.href='users.php';</script>";
+               echo "<script type='text/javascript'>window.location='users.php?msg=success'</script>";
             } else {
-               echo "<script>alert('Data Updation Failed');window.location.href='users.php';</script>";
+               echo "<script type='text/javascript'>window.location='users.php?msg=fail'</script>";
             }
         }
 ?>
