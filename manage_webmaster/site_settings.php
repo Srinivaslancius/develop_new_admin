@@ -101,7 +101,7 @@
                   </div>         
 
                   <div class="form-group">
-                    <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" height="100" width="100" id="output"/>
+                    <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" accept="image/*" height="100" width="100" id="output"/>
                   </div>      
 
 

@@ -56,6 +56,15 @@
               </a>
             </li>
 
+            <li  class="<?php if($page_name == 'products.php') { echo "active"; } ?>">
+              <a href="products.php" aria-haspopup="true">
+                <span class="menu-icon">
+                   <i class="zmdi zmdi-collection-image zmdi-hc-fw"></i>
+                </span> 
+                <span class="menu-text">Products</span>
+              </a>
+            </li> 
+
 
           </ul>
         </div>

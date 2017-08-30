@@ -33,7 +33,7 @@ if(!isset($_SESSION['admin_user_id'])) {
       <nav class="navbar navbar-default" style="background-color:#D4E6F1 !important;">
         <div class="navbar-header">
           <a class="navbar-brand" href="dashboard.php">
-            <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" height="20">
+            <img src="<?php echo $base_url . 'uploads/logo/'.$getSiteSettingsData['logo'] ?>" accept="image/*" height="20">
             <span><?php echo $getSiteSettingsData['admin_title'];?></span>
           </a>
           <button class="navbar-toggler left-sidebar-toggle pull-left visible-xs" type="button">
