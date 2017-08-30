@@ -35,7 +35,7 @@
                     <!-- Open Modal Box  here -->
                     <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">

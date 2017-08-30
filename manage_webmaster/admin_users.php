@@ -36,7 +36,7 @@
                      <!-- Open Modal Box  here -->
                     <div id="successModal2" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">
@@ -47,11 +47,11 @@
                           </div>
                         <div class="modal-body">
 
-              						 <div class="Name"><strong>Name: </strong>&nbsp<?php echo $row['admin_name'];?> </div>
-              						  <div class="Email"><strong>Email: </strong>&nbsp<?php echo $row['admin_email'];?></div>
-              						  <div class="tel"><strong>Created Date: </strong>&nbsp<?php echo $row['created_at'];?></div>
-                            <div class="tel"><strong>Status: </strong>&nbsp<?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
-              					</div>
+              						 <div class="Name">Name: &nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_name'];?> </div>
+              						  <div class="Email">Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_email'];?></div>
+              						  <div class="tel">Date: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['created_at'];?></div>
+                            <div class="Status">Status: &nbsp&nbsp&nbsp&nbsp&nbsp<?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
+                        </div>
                           <div class="modal-footer">
                           <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
                           <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
