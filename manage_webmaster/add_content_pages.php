@@ -9,9 +9,9 @@ if (!isset($_POST['submit']))  {
   
   $sql = "INSERT INTO content_pages (`title`, `description`, `status`) VALUES ('$title', '$description', '$status')";
   if($conn->query($sql) === TRUE){
-    echo "<script>alert('Data Updated Successfully');window.location.href='content_pages.php';</script>";
+    echo "<script type='text/javascript'>window.location='content_pages.php?msg=success'</script>";
   }else {
-    echo "<script>alert('Data Updation Failed');window.location.href='content_pages.php';</script>";
+    echo "<script type='text/javascript'>window.location='content_pages.php?msg=fail'</script>";
   }      
 }
 ?>

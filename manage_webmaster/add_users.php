@@ -21,9 +21,9 @@ if (!isset($_POST['submit']))  {
     
     $sql = "INSERT INTO users (`user_name`, `user_email`, `user_mobile`,`street_name`,`street_no`,`flat_name`,`flat_no`,`location`,`landmark`,`pincode`,`created_admin_id`, `created_at`, `status`) VALUES ('$user_name', '$user_email', '$user_mobile','$street_name','$street_no','$flat_name','$flat_no','$location','$landmark','$pincode','$created_admin_id','$created_at', 0)";
     if($conn->query($sql) === TRUE){
-       echo "<script>alert('Data Updated Successfully');window.location.href='users.php';</script>";
+       echo "<script type='text/javascript'>window.location='users.php?msg=success'</script>";
     } else {
-       echo "<script>alert('Data Updation Failed');window.location.href='users.php';</script>";
+       echo "<script type='text/javascript'>window.location='users.php?msg=fail'</script>";
     }
 }
 ?>

@@ -21,9 +21,9 @@ $id = $_GET['bid'];
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $sql = "UPDATE `banners` SET title = '$title', banner = '$fileToUpload', status='$status' WHERE id = '$id' ";
                     if($conn->query($sql) === TRUE){
-                       echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
+                       echo "<script type='text/javascript'>window.location='banners.php?msg=success'</script>";
                     } else {
-                       echo "<script>alert('Data Updation Failed');window.location.href='banners.php';</script>";
+                       echo "<script type='text/javascript'>window.location='banners.php?msg=fail'</script>";
                     }
                     //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
                 } else {
@@ -32,9 +32,9 @@ $id = $_GET['bid'];
             }  else {
                 $sql = "UPDATE `banners` SET title = '$title', status='$status' WHERE id = '$id' ";
                 if($conn->query($sql) === TRUE){
-                   echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
+                   echo "<script type='text/javascript'>window.location='banners.php?msg=success'</script>";
                 } else {
-                   echo "<script>alert('Data Updation Failed');window.location.href='banners.php';</script>";
+                   echo "<script type='text/javascript'>window.location='banners.php?msg=fail'</script>";
                 }
             }   
             
@@ -66,16 +66,17 @@ $getBanners = $getBannersData->fetch_assoc();
                         <input id="form-control-22" class="file-upload-input" type="file" accept="image/*" name="fileToUpload" id="fileToUpload"  onchange="loadFile(event)"  multiple="multiple" >
                       </label>
                   </div>
+                  <?php $getStatus = getDataFromTables('user_status',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);?>
                   <div class="form-group">
                     <label for="form-control-3" class="control-label">Choose your status</label>
                     <select id="form-control-3" name="status" class="custom-select" data-error="This field is required." required>
-                      <!-- <option value="" selected="selected">Choose your status</option> -->
-                      <option value="1"<?php if($getBanners['status'] == 1) { echo "Selected"; }?>>Active</option>
-                      <option value="2"<?php if($getBanners['status'] == 2) { echo "Selected"; }?>>In Active</option>
-                      
-                    </select>
+                      <option value="">Select Status</option>
+                      <?php while($row = $getStatus->fetch_assoc()) {  ?>
+                          <option <?php if($row['id'] == $getBanners['status']) { echo "Selected"; } ?> value="<?php echo $row['id']; ?>"><?php echo $row['status']; ?></option>
+                      <?php } ?>
+                   </select>
                     <div class="help-block with-errors"></div>
-                  </div>  
+                  </div>      
 
                   <button type="submit" name="submit" value="Submit"  class="btn btn-primary btn-block">Submit</button>
                 </form>
