@@ -1,5 +1,5 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
-<?php $getOrdersData = getAllDataWithActiveRecent('orders'); $i=1; ?>
+
       <style>
                 .table1 {
                     display: table;
@@ -71,9 +71,9 @@
                           <div class="modal-dialog" Style="margin-top:10%;">
                               <div class="modal-content">
                                   <div class="modal-header">
-                                  <h3 class="modal-title"><b>Order Information</b></h3>
+                                  <h3 class="modal-title" style="text-align: center;"><b>Order Information</b></h3>
                                   </div>
-                                  <div class="modal-body" >
+                                  <div class="modal-body" style="padding-left: 15px;padding-top: 5px">
                                   
                                       <div class="table1" style="width:100%">
 
@@ -107,7 +107,55 @@
                                                <div class="table1-cell"></div>
                                               <div class="table1-cell"><?php echo $res1['pin_code'];?></div>
                                           </div>
-                                       
+                                          <div class="table1-row table1-header">
+                                              <div class="table1-cell">Item Name</div>
+                                              <div class="table1-cell">Quantity</div>
+                                              <div class="table1-cell">Price</div>
+                                              <div class="table1-cell">Total</div>
+                                          </div>
+
+                                          <?php $proInfo = getDataFromTables('orders',$status=NULL,'order_id',$res1['order_id'],$activeStatus=NULL,$activeTop=NULL); ?>
+                                              <?php while($getAllProInfo = $proInfo->fetch_assoc()) { ?>
+                                              <div class="table1-row">
+                                                  <div class="table1-cell"><?php echo $getAllProInfo['product_name']; ?></div>
+                                                  <div class="table1-cell"><?php echo $getAllProInfo['product_quantity']; ?></div>
+                                                  <div class="table1-cell"><?php echo $getAllProInfo['product_price']; ?></div>
+                                                  <div class="table1-cell"><?php echo $getAllProInfo['product_total_price']; ?></div>
+                                              </div>
+                                              <?php } ?>
+                                              <div class="table1-row table1-header" style="width:100%">
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell">Order Total</div>
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell"></div>
+                                              </div>
+                                              <div class="table1-row table1-footer">
+                                                  <div class="table1-cell">Sub Total</div>
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell"><?php echo $res1['cart_sub_total']; ?></div>
+                                                  <div class="table1-cell"></div>
+                                              </div>  
+
+                                              <div class="table1-row table1-footer">
+                                                  <div class="table1-cell">Delivery Charges</div>
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell"><?php echo $res1['delivery_charges']; ?></div>
+                                                  <div class="table1-cell"></div>
+                                              </div>
+
+                                              <div class="table1-row table1-footer">
+                                                  <div class="table1-cell">Packaging Charges</div>
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell"><?php echo $res1['packaging_charges']; ?></div>
+                                                  <div class="table1-cell"></div>
+                                              </div>
+
+                                              <div class="table1-row table1-footer">
+                                                  <div class="table1-cell">Order Total</div>
+                                                  <div class="table1-cell"></div>
+                                                  <div class="table1-cell"><?php echo $res1['order_total']; ?></div>
+                                                  <div class="table1-cell"></div>
+                                              </div>
                                       </div>
                                   </div>
                                   <div class="modal-footer" >                                                        
