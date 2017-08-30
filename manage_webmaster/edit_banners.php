@@ -21,9 +21,9 @@ $id = $_GET['bid'];
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $sql = "UPDATE `banners` SET title = '$title', banner = '$fileToUpload', status='$status' WHERE id = '$id' ";
                     if($conn->query($sql) === TRUE){
-                       echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
+                       echo "<script type='text/javascript'>window.location='banners.php?msg=success'</script>";
                     } else {
-                       echo "<script>alert('Data Updation Failed');window.location.href='banners.php';</script>";
+                       echo "<script type='text/javascript'>window.location='banners.php?msg=fail'</script>";
                     }
                     //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
                 } else {
@@ -32,9 +32,9 @@ $id = $_GET['bid'];
             }  else {
                 $sql = "UPDATE `banners` SET title = '$title', status='$status' WHERE id = '$id' ";
                 if($conn->query($sql) === TRUE){
-                   echo "<script>alert('Data Updated Successfully');window.location.href='banners.php';</script>";
+                   echo "<script type='text/javascript'>window.location='banners.php?msg=success'</script>";
                 } else {
-                   echo "<script>alert('Data Updation Failed');window.location.href='banners.php';</script>";
+                   echo "<script type='text/javascript'>window.location='banners.php?msg=fail'</script>";
                 }
             }   
             
