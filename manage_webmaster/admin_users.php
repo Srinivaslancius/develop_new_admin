@@ -47,23 +47,23 @@
                           </div>
                         <div class="modal-body">
 
-              						 <div class="Name">Name: &nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_name'];?> </div>
-              						  <div class="Email">Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_email'];?></div>
-              						  <div class="tel">Date: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['created_at'];?></div>
+                           <div class="Name">Name: &nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_name'];?> </div>
+                            <div class="Email">Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['admin_email'];?></div>
+                            <div class="tel">Date: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['created_at'];?></div>
                             <div class="Status">Status: &nbsp&nbsp&nbsp&nbsp&nbsp<?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
                         </div>
                           <div class="modal-footer">
                           <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
                           <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
-            							<style>
-            							.modal-body{
-            								font-size:15px;
-            								text-align:justify;
-            								padding-left:110px;
-            								padding-top:30px;
-            								font-family:Roboto,sans-serif;
-            							}
-            							</style>
+                          <style>
+                          .modal-body{
+                            font-size:15px;
+                            text-align:justify;
+                            padding-left:110px;
+                            padding-top:30px;
+                            font-family:Roboto,sans-serif;
+                          }
+                          </style>
                           </div>
                           </div>
                       </div>
