@@ -23,8 +23,7 @@
         $result = $conn->query($sql);         
         return $result;
 
-    }
-  
+    }  
 
     /*Common function with where out where get all data from query */
     function getAllDataWithActiveRecent($table)  {
