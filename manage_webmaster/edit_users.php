@@ -1,5 +1,6 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
 <?php  
+error_reporting(0);  
 $id = $_GET['uid'];
  if (!isset($_POST['submit']))  {
             echo "";
