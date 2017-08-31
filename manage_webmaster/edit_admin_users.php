@@ -20,6 +20,8 @@ $id = $_GET['uid'];
             }
         }
 ?>
+
+
       <div class="site-content">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -46,7 +48,7 @@ $id = $_GET['uid'];
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Password</label>
-                    <input type="text" name="admin_password" class="form-control" id="form-control-2" placeholder="Password" data-error="Please enter Correct Password." required value="<?php echo $getUsers1['admin_password'];?>">
+                    <input type="text" name="admin_password" class="form-control" id="form-control-2" placeholder="Password" data-error="Please enter Correct Password." required value="<?php echo decryptPassword($getUsers1['admin_password']);?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
