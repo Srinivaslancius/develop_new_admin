@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/cosmos.min.css">
     <link rel="stylesheet" href="css/application.min.css">
   </head>
-  <body class="authentication-body">
+  <body class="authentication-body" style="background:url(img/about_3.jpg) no-repeat; background-size:cover; ">
     <div class="container-fluid">
       <div class="authentication-header m-b-30">
         <div class="clearfix">
@@ -67,7 +67,7 @@
           <!-- end error message -->      
 
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-4 col-sm-offset-4"  style="background:wheat">
           <div class="authentication-content m-b-30">
             <h3 class="m-t-0 m-b-30 text-center">You look great today!</h3>
             <form autocomplete="off" method="post" action="login-script.php" data-toggle="validator">
