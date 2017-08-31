@@ -73,7 +73,7 @@
             <form autocomplete="off" method="post" action="login-script.php" data-toggle="validator">
               <div class="form-group">
                 <label for="form-control-1">Email address</label>
-                <input type="email" class="form-control" id="form-control-2" placeholder="Email" name="admin_email" data-error="Please enter a valid email address." required>
+                <input type="email" class="form-control" autofocus="autofocus" id="form-control-2" placeholder="Email" name="admin_email" data-error="Please enter a valid email address." required>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
