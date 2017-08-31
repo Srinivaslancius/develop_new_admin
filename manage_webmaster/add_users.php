@@ -59,7 +59,7 @@ if (!isset($_POST['submit']))  {
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Mobile</label>
-                    <input type="text" name="user_mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter Correct Mobile Number." required maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)">
+                    <input type="text" name="user_mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter Correct Mobile Number." required maxlength="10" pattern="[0-9]{10}" onkeypress="return isNumberKey(event)">
                     <div class="help-block with-errors"></div>
                   </div>
 
@@ -101,7 +101,7 @@ if (!isset($_POST['submit']))  {
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Pincode</label>
-                    <input type="text" name="pincode" class="form-control" id="form-control-2" placeholder="Pincode" data-error="Please enter correct pincode number." required maxlength="6"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)">
+                    <input type="text" name="pincode" class="form-control" id="form-control-2" placeholder="Pincode" data-error="Please enter correct pincode number." required maxlength="6" onkeypress="return isNumberKey(event)">
                     <div class="help-block with-errors"></div>
                   </div>
                   
