@@ -59,7 +59,7 @@ $id = $_GET['uid'];
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Mobile</label>
-                    <input type="text" name="user_mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter Correct Mobile Number." required value="<?php echo $getUsers1['user_mobile'];?>">
+                    <input type="text" name="user_mobile" class="form-control" id="form-control-2" placeholder="Mobile" data-error="Please enter Correct Mobile Number." required maxlength="10" pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" value="<?php echo $getUsers1['user_mobile'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
@@ -101,7 +101,7 @@ $id = $_GET['uid'];
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Pincode</label>
-                    <input type="text" name="pincode" class="form-control" id="form-control-2" placeholder="Pincode" data-error="Please enter correct pincode number." required value="<?php echo $getUsers1['pincode'];?>">
+                    <input type="text" name="pincode" class="form-control" id="form-control-2" placeholder="Pincode" data-error="Please enter correct pincode number." required maxlength="6" onkeypress="return isNumberKey(event)" value="<?php echo $getUsers1['pincode'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   
@@ -127,3 +127,11 @@ $id = $_GET['uid'];
       </div>
   
 <?php include_once 'admin_includes/footer.php'; ?>
+<script type="text/javascript">
+    function isNumberKey(evt){
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+</script>
