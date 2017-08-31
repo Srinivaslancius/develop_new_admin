@@ -7,6 +7,7 @@ $id = $_GET['uid'];
 
             $user_name = $_POST['user_name'];
             $user_email = $_POST['user_email'];
+            $user_password = encryptPassword($_POST['user_password']);
             $user_mobile = $_POST['user_mobile'];
             $street_name = $_POST['street_name'];
             $street_no = $_POST['street_no'];
@@ -17,7 +18,7 @@ $id = $_GET['uid'];
             $pincode = $_POST['pincode'];
             $status = $_POST['status'];
             
-            $sql = "UPDATE `users` SET user_name='$user_name', user_email='$user_email', user_mobile='$user_mobile',street_name= '$street_name',street_no = '$street_no',flat_name = '$flat_name',flat_no = '$flat_no',location = '$location',landmark = '$landmark',pincode = '$pincode',status = '$status' WHERE id = '$id' ";
+            $sql = "UPDATE `users` SET user_name='$user_name', user_email='$user_email',user_password='$user_password', user_mobile='$user_mobile',street_name= '$street_name',street_no = '$street_no',flat_name = '$flat_name',flat_no = '$flat_no',location = '$location',landmark = '$landmark',pincode = '$pincode',status = '$status' WHERE id = '$id' ";
             if($conn->query($sql) === TRUE){
                echo "<script type='text/javascript'>window.location='users.php?msg=success'</script>";
             } else {
@@ -46,6 +47,12 @@ $id = $_GET['uid'];
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Email</label>
                     <input type="email" name="user_email" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter a valid email address." required value="<?php echo $getUsers1['user_email'];?>">
+                    <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-control-2" class="control-label">Password</label>
+                    <input type="text" name="user_password" class="form-control" id="form-control-2" placeholder="Password" data-error="Please enter Correct Password." required value="<?php echo decryptPassword($getUsers1['user_password']);?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
