@@ -27,9 +27,9 @@ if (!isset($_POST['submit']))  {
         $sql1 = "UPDATE products SET product_name = '$product_name', product_price ='$product_price',quantity = '$quantity',product_info = '$product_info',availability_id = '$availability_id',status = '$status',product_image = '$product_images1' WHERE id = '$id'"; 
         
             if ($conn->query($sql1) === TRUE) {
-                echo "<script>alert('Data Updated Successfully');window.location.href='products.php';</script>";
+                echo "<script type='text/javascript'>window.location='products.php?msg=success'</script>";
             } else {
-                echo "<script>alert('Data Updation Failed');window.location.href='products.php';</script>";
+                echo "<script type='text/javascript'>window.location='products.php?msg=fail'</script>";
             }
         }else{
             echo "Sorry, there was an error uploading your file.";
@@ -37,9 +37,9 @@ if (!isset($_POST['submit']))  {
     } else {
      $sql1 = "UPDATE products SET product_name = '$product_name',product_price ='$product_price',quantity = '$quantity',product_info = '$product_info',availability_id = '$availability_id',status = '$status'WHERE id = '$id'"; 
      if ($conn->query($sql1) === TRUE) {
-        echo "<script>alert('Data Updated Successfully');window.location.href='products.php';</script>";
+        echo "<script type='text/javascript'>window.location='products.php?msg=success'</script>";
     } else {
-        echo "<script>alert('Data Updation Failed');window.location.href='products.php';</script>";
+        echo "<script type='text/javascript'>window.location='products.php?msg=fail'</script>";
     }
 }
 

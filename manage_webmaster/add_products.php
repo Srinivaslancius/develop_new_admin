@@ -36,9 +36,9 @@ if (!isset($_POST['submit']))  {
     }*/
     
     if( $result1 == 1){
-    echo "<script>alert('Data Updated Successfully');window.location.href='products.php';</script>";
+    echo "<script type='text/javascript'>window.location='products.php?msg=success'</script>";
     } else {
-       echo "<script>alert('Data Updation Failed');window.location.href='products.php';</script>";
+       echo "<script type='text/javascript'>window.location='products.php?msg=fail'</script>";
     }
 }
 ?>
