@@ -45,25 +45,25 @@ if (!isset($_POST['submit']))  {
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Name</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_name" placeholder="Product Name" data-error="Please enter title." required>
+                    <input type="text" class="form-control" id="form-control-2" name="product_name" placeholder="Product Name" data-error="Please enter product name." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Price</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_price" placeholder="Product Price" data-error="Please enter title." required>
+                    <input type="text" class="form-control" id="form-control-2" name="product_price" placeholder="Product Price" data-error="Please enter product price." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Quantity</label>
-                    <input type="text" class="form-control" id="form-control-2" name="quantity" placeholder="Quantity" data-error="Please enter title." required>
+                    <input type="text" class="form-control" id="form-control-2" name="quantity" placeholder="Quantity" data-error="Please enter Quantity." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Info</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_info" placeholder="Product Info" data-error="Please enter title." required>
+                    <input type="text" class="form-control" id="form-control-2" name="product_info" placeholder="Product Info" data-error="Please enter Product Info." required>
                     <div class="help-block with-errors"></div>
                   </div>
 
