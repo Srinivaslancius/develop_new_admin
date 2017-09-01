@@ -30,12 +30,12 @@ if (!isset($_POST['submit'])) {
                 <form data-toggle="validator" method="POST">
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Title</label>
-                    <input type="text" name="title" class="form-control" id="form-control-2" data-error="Please enter a valid User Name" required value="<?php echo $getContents1['title'];?>">
+                    <input type="text" name="title" class="form-control" id="form-control-2" data-error="Please enter a Title" required value="<?php echo $getContents1['title'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Description</label>
-                    <textarea name="description" class="form-control" id="description" data-error="Please enter a valid email address." required><?php echo $getContents1['description'];?></textarea>
+                    <textarea name="description" class="form-control" id="description" data-error="This field is required." required><?php echo $getContents1['description'];?></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
                   <?php $getStatus = getDataFromTables('user_status',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);?>

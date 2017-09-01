@@ -31,17 +31,17 @@ $id = $_GET['uid'];
                 <form data-toggle="validator" method="POST">
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Admin Name</label>
-                    <input type="text" name="admin_name" class="form-control" id="form-control-2" placeholder="Admin Name" data-error="Please enter a valid User Name" required value="<?php echo $getUsers1['admin_name'];?>">
+                    <input type="text" name="admin_name" class="form-control" id="form-control-2" placeholder="Admin Name" data-error="Please enter Name" required value="<?php echo $getUsers1['admin_name'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Email</label>
-                    <input type="email" name="admin_email" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter a valid email address." required value="<?php echo $getUsers1['admin_email'];?>">
+                    <input type="email" name="admin_email" class="form-control" id="form-control-2" placeholder="Email" data-error="Please enter valid email address." required value="<?php echo $getUsers1['admin_email'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Password</label>
-                    <input type="text" name="admin_password" class="form-control" id="form-control-2" placeholder="Password" data-error="Please enter Correct Password." required value="<?php echo decryptPassword($getUsers1['admin_password']);?>">
+                    <input type="text" name="admin_password" class="form-control" id="form-control-2" placeholder="Password" data-error="Please enter Password." required value="<?php echo decryptPassword($getUsers1['admin_password']);?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   <?php $getStatus = getDataFromTables('user_status',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);?>

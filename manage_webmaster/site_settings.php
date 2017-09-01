@@ -94,7 +94,7 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Mobile</label>
-                    <input type="text" name="mobile" class="form-control" id="form-control-2" maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" placeholder="Mobile" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['mobile'];?>" required>
+                    <input type="text" name="mobile" class="form-control" id="form-control-2" maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" placeholder="Mobile" data-error="Please enter valid Mobile." value="<?php echo $getSiteSettingsData['mobile'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>         
 
@@ -112,13 +112,13 @@
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Footer Text</label>
-                    <input type="text" name="footer_text" class="form-control" id="form-control-2" placeholder="Footer Text" data-error="Please enter a valid Mobile." value="<?php echo $getSiteSettingsData['footer_text'];?>" required>
+                    <input type="text" name="footer_text" class="form-control" id="form-control-2" placeholder="Footer Text" data-error="Please enter valid Footer text." value="<?php echo $getSiteSettingsData['footer_text'];?>" required>
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-4" class="control-label">Address</label>
-                    <textarea type="text" name="address" class="form-control" id="form-control-2" placeholder="Address" data-error="Please enter a valid Mobile." required><?php echo $getSiteSettingsData['address'];?></textarea>
+                    <textarea type="text" name="address" class="form-control" id="form-control-2" placeholder="Address" data-error="This field is required." required><?php echo $getSiteSettingsData['address'];?></textarea>
                   </div>
                   <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
