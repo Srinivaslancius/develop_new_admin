@@ -50,5 +50,13 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 m-b-30">
+          <h4 class="m-t-0 m-b-30">Pie chart</h4>
+          <div id="pie" style="height: 300px"></div>
+        </div>
+
+
       </div>
      <?php include_once 'admin_includes/footer.php'; ?>
+     <script src="js/charts-flot.min.js"></script>
