@@ -13,8 +13,7 @@ if(!isset($_SESSION['admin_user_id'])) {
 
 <!DOCTYPE html>
 <html lang="en">  
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -67,7 +66,7 @@ if(!isset($_SESSION['admin_user_id'])) {
                     <span class="caret"></span>
                   </span>
                 </a>
-                <ul class="dropdown-menu">                                  
+                <ul class="dropdown-menu">
                   <li>
                     <a href="logout.php">
                       <i class="zmdi zmdi-power m-r-10"></i> Logout</a>
