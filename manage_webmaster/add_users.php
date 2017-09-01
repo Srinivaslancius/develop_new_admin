@@ -2,8 +2,10 @@
 <?php
 error_reporting(0);  
 if (!isset($_POST['submit']))  {
-            echo "";
+  //If fail
+  echo "fail";
 } else  {
+  //If fail
     //Save data into database
     /*echo "<pre>";
     print_r($_POST);die;*/
@@ -38,7 +40,6 @@ if (!isset($_POST['submit']))  {
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <form data-toggle="validator" method="POST">
-
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Name</label>
                     <input type="text" name="user_name" class="form-control" id="form-control-2" placeholder="User Name" data-error="Please enter a valid User Name" required autofocus="on">
@@ -111,27 +112,26 @@ if (!isset($_POST['submit']))  {
                     <select id="form-control-3" name="status" class="custom-select" data-error="This field is required." required>
                       <option value="">Select Status</option>
                       <?php while($row = $getStatus->fetch_assoc()) {  ?>
-                          <option value="<?php echo $row['id']; ?>"><?php echo $row['status']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['status']; ?></option>
                       <?php } ?>
                    </select>
                     <div class="help-block with-errors"></div>
-                  </div>                  
+                  </div>
                 
                   <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
               </div>
             </div>
-            <hr>           
+            <hr>
           </div>
         </div>
       </div>
-  
 <?php include_once 'admin_includes/footer.php'; ?>
 <script type="text/javascript">
-    function isNumberKey(evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57))
-            return false;
-        return true;
+  function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+      if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+      return true;
     }
 </script>
