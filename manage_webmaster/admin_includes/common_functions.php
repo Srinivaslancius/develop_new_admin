@@ -4,11 +4,11 @@
 
         global $conn;
         if($table!='' && $table!=NULL && $clause!='' && $clause!=NULL && $id!='' && $id!=NULL) {
-            //Get All Table Data with Where Condition(4)            
+            //Get All Table Data with Where Condition(4)
             $sql="select * from `$table` WHERE `$clause` = '$id' ";
         } elseif($table!='' && $table!=NULL && $status!='' && $status!=NULL) {
-            //Get Active Records (3)         
-            $sql="select * from `$table` WHERE `status` = '$status' ORDER BY id DESC  ";
+            //Get Active Records (3)
+            $sql="select * from `$table` WHERE `status` = '$status' ORDER BY id DESC";
         } elseif($table!='' && $table!=NULL && $activeTop!='' && $activeTop!=NULL) {
             //Get All Active records top Table Data (6)
             $sql="select * from `$table` ORDER BY status, id DESC ";
@@ -16,20 +16,19 @@
             //Get All Table Data (1)
             $sql="select * from `$table` ORDER BY status, id DESC";
         }  else {
-            //Last if fail then go to this 
+            //Last if fail then go to this
             $sql="select * from `$table` ORDER BY status, id DESC";
-        } 
+        }
 
-        $result = $conn->query($sql);         
+        $result = $conn->query($sql);
         return $result;
-
-    }  
+    }
 
     /*Common function with where out where get all data from query */
     function getAllDataWithActiveRecent($table)  {
         global $conn;
         $sql="select * from `$table` ORDER BY status, id DESC ";
-        $result = $conn->query($sql);         
+        $result = $conn->query($sql); 
         return $result;
     }
 
@@ -38,20 +37,20 @@
         global $conn;
         $sql="select * from `$table` ";
         $result = $conn->query($sql);
-        $noRows = $result->num_rows;        
+        $noRows = $result->num_rows;
         return $noRows;
     }
 
     /* encrypt and decrypt password */
      function encryptPassword($pwd) {
         $key = "123";
-        $admin_pwd = bin2hex(openssl_encrypt($pwd,'AES-128-CBC', $key));    
+        $admin_pwd = bin2hex(openssl_encrypt($pwd,'AES-128-CBC', $key));
         return $admin_pwd;
     }
 
     function decryptPassword($admin_password) {
         $key = "123";
-        $admin_pwd = openssl_decrypt(hex2bin($admin_password),'AES-128-CBC',$key);  
+        $admin_pwd = openssl_decrypt(hex2bin($admin_password),'AES-128-CBC',$key);
         return $admin_pwd;
     }
 
@@ -69,5 +68,4 @@
             return 0;
         }
     }
-    
 ?>
