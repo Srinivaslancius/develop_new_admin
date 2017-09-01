@@ -6,10 +6,10 @@ $setcon = 2;
 if($setcon == 1) {
 	$servername = "localhost";
 	$username = "";
-	$password = "capital@123";
-	$dbname = "capitalsecure_latest";
+	$password = "";
+	$dbname = "";
 } else {
-	$servername = "192.168.0.101";	
+	$servername = "192.168.0.115";	
 	$username = "root";
 	$password = "root";
 	$dbname = "develop_new_admin";
