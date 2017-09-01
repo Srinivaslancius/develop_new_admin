@@ -1,8 +1,10 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
 <?php  
 if (!isset($_POST['submit']))  {
-  echo "";
+  //If fail
+  echo "fail";
 }else  {
+  //If success
   $title = $_POST['title'];
   $description = $_POST['description'];
   $status = $_POST['status'];
@@ -12,7 +14,7 @@ if (!isset($_POST['submit']))  {
     echo "<script type='text/javascript'>window.location='content_pages.php?msg=success'</script>";
   }else {
     echo "<script type='text/javascript'>window.location='content_pages.php?msg=fail'</script>";
-  }      
+  }
 }
 ?>
       <div class="site-content">
@@ -20,11 +22,10 @@ if (!isset($_POST['submit']))  {
           <div class="panel-heading">
             <h3 class="m-y-0">Content Pages</h3>
           </div>
-          <div class="panel-body">            
+          <div class="panel-body">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <form data-toggle="validator" method="POST">
-
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Title</label>
                     <input type="text" name="title" class="form-control" id="form-control-2" placeholder="Title" data-error="Please enter Title" required>
@@ -47,13 +48,13 @@ if (!isset($_POST['submit']))  {
                       <?php } ?>
                    </select>
                     <div class="help-block with-errors"></div>
-                  </div>                  
+                  </div>
                 
                   <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
               </div>
             </div>
-            <hr>           
+            <hr>
           </div>
         </div>
       </div>
