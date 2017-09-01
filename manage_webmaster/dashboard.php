@@ -1,6 +1,4 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
-   
-      
       <div class="site-content">
         <div class="row">
           <div class="col-md-4 col-sm-5">
