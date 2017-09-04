@@ -39,7 +39,7 @@ $id = $_GET['oid'];
                 <form data-toggle="validator" method="POST">
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Order Id</label>
-                    <input type="text" name="order_id" class="form-control" id="form-control-2" placeholder="Admin Name" data-error="Please enter Name" required value="<?php echo $getOrders1['order_id'];?>">
+                    <input type="text" name="order_id" class="form-control" id="form-control-2" placeholder="order_id" data-error="Please enter Name" required value="<?php echo $getOrders1['order_id'];?>">
                     <div class="help-block with-errors"></div>
                   </div>
                   
