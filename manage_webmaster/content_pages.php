@@ -29,68 +29,38 @@
                     <!-- Open Modal Box  here -->
                     <div id="<?php echo $row['id']; ?>" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Modal title</h4></center>
+                            <center><h4 class="modal-title">ContentPages Information</h4></center>
                           </div>
-                        <div class="modal-body">
-              <div class="row">
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-4">
-                Title:
-                </div>
-                <div class="col-sm-6">
-                <?php echo $row['title'];?>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-4">
-               Description:
-                </div>
-                <div class="col-sm-6">
-                <?php echo $row['description'];?> 
-                </div>
-              
-              </div>
-              <div class="row">
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-4">
-                Date:
-                </div>
-                <div class="col-sm-6">
-                28/08/2017
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-4">
-                Status:
-                </div>
-                <div class="col-sm-6">
-                Active
-                </div>
-              </div>
-            </div>
-                        <div class="modal-footer">
-                        <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
+                          <div class="modal-body" id="modal_body">
+                            <div class="row">
+                              <div class="col-sm-2"></div>
+                              <div class="col-sm-4">Title:</div>
+                              <div class="col-sm-6"><?php echo $row['title'];?></div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-2"></div>
+                              <div class="col-sm-4">Description:</div>
+                              <div class="col-sm-6"><?php echo $row['description'];?></div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
                             <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
-              <style>
-              .modal-body{
-                font-size:16px;
-                padding-top:30px;
-                font-family:Roboto,sans-serif;
-              }
-              </style>
+                              <style>
+                              #modal_body{
+                                font-size:14px;
+                                padding-top:30px;
+                                padding-left: 0px;
+                                font-family:Roboto,sans-serif;
+                              }
+                              </style>
                           </div>
                         </div>
                       </div>
