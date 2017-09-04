@@ -32,30 +32,57 @@
                      <!-- Open Modal Box  here -->
                     <div id="<?php echo $row['id']; ?>" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content animated flipInX">
                           <div class="modal-header bg-success">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">
                                 <i class="zmdi zmdi-close"></i>
                               </span>
                             </button>
-                            <center><h4 class="modal-title">Product Information</h4></center>
+                            <center><h4 class="modal-title">Products Information</h4></center>
                           </div>
-                        <div class="modal-body">
-                          <div class="Title"><strong>Product Name:</strong>&nbsp<?php echo $row['product_name'];?> </div>
-                          <div class="Description"><strong>Product Price:</strong>&nbsp<?php echo $row['product_price'];?> </div>
+                        <div class="modal-body" id="modal_body">
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Name: </div>
+                            <div class="col-sm-6"><?php echo $row['product_name'];?></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Price: </div>
+                            <div class="col-sm-6"><?php echo $row['product_price'];?></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Quantity: </div>
+                            <div class="col-sm-6"><?php echo $row['quantity'];?></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Product Inforamtion: </div>
+                            <div class="col-sm-6"><?php echo $row['product_info'];?></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Availability: </div>
+                            <div class="col-sm-6"><?php if($row['availability_id'] == 0 ){ echo "In Stock";} else{ echo "Out Of Stock";}?></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">Status: </div>
+                            <div class="col-sm-6"><?php if($row['status'] == 0 ){ echo "Active";} else{ echo "InActive";}?></div>
+                          </div>
                         </div>
                         <div class="modal-footer">
-                        <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
+                          <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
                           <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
                           <style>
-                          .modal-body{
-                            font-size:15px;
-                            text-align:justify;
-                            padding-left:110px;
-                            padding-top:30px;
-                            font-family:Roboto,sans-serif;
-                          }
+                            #modal_body{
+                              font-size:14px;
+                              padding-top:30px;
+                              padding-left: 0px;
+                              font-family:Roboto,sans-serif;
+                            }
                           </style>
                         </div>
                       </div>
