@@ -61,25 +61,25 @@ $getProducts = $getProductsData->fetch_assoc();
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Name</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_name" required value="<?php echo $getProducts['product_name']; ?>">
+                    <input type="text" class="form-control" id="form-control-2" name="product_name" data-error="Please enter product name." required value="<?php echo $getProducts['product_name']; ?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Price</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_price" required value="<?php echo $getProducts['product_price']; ?>">
+                    <input type="text" class="form-control" id="form-control-2" name="product_price" data-error="Please enter product price." required value="<?php echo $getProducts['product_price']; ?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Quantity</label>
-                    <input type="text" class="form-control" id="form-control-2" name="quantity" required value="<?php echo $getProducts['quantity']; ?>">
+                    <input type="text" class="form-control" id="form-control-2" name="quantity" data-error="Please enter Quantity." required value="<?php echo $getProducts['quantity']; ?>">
                     <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
                     <label for="form-control-2" class="control-label">Product Info</label>
-                    <input type="text" class="form-control" id="form-control-2" name="product_info" required value="<?php echo $getProducts['product_info']; ?>">
+                    <input type="text" class="form-control" id="form-control-2" name="product_info" data-error="Please enter Product Info." required value="<?php echo $getProducts['product_info']; ?>">
                     <div class="help-block with-errors"></div>
                   </div>
 

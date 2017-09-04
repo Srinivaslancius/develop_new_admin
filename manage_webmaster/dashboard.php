@@ -1,6 +1,4 @@
 <?php include_once 'admin_includes/main_header.php'; ?>
-   
-      
       <div class="site-content">
         <div class="row">
           <div class="col-md-4 col-sm-5">
@@ -52,5 +50,13 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 m-b-30">
+          <h4 class="m-t-0 m-b-30">Pie chart</h4>
+          <div id="pie" style="height: 300px"></div>
+        </div>
+
+
       </div>
      <?php include_once 'admin_includes/footer.php'; ?>
+     <script src="js/charts-flot.min.js"></script>
