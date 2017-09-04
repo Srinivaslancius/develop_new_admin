@@ -27,38 +27,75 @@
                     <td><?php if ($row['status']==0) { echo "<span class='label label-outline-success check_active open_cursor' data-incId=".$row['id']." data-status=".$row['status']." data-tbname='content_pages'>Active</span>" ;} else { echo "<span class='label label-outline-info check_active open_cursor' data-status=".$row['status']." data-incId=".$row['id']." data-tbname='content_pages'>In Active</span>" ;} ?></td>
                     <td> <a href="edit_content_pages.php?uid=<?php echo $row['id']; ?>"><i class="zmdi zmdi-edit"></i></a> &nbsp; <a href="#"><i class="zmdi zmdi-eye zmdi-hc-fw" data-toggle="modal" data-target="#<?php echo $row['id']; ?>" class=""></i></a></td>
                     <!-- Open Modal Box  here -->
-                  <div id="<?php echo $row['id']; ?>" class="modal fade" tabindex="-1" role="dialog">
+                    <div id="<?php echo $row['id']; ?>" class="modal fade" tabindex="-1" role="dialog">
                       <div class="modal-dialog">
-                        <div class="modal-content animated flipInX">
-                            <div class="modal-header bg-success">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">
-                                  <i class="zmdi zmdi-close"></i>
-                                </span>
-                              </button>
-                              <center><h4 class="modal-title">ContentPage Information</h4></center>
-                            </div>
-                            <div class="modal-body">
-                              <div class="Title"><strong>Title:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['title'];?> </div>
-                              <div class="Description"><strong>Description:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['description'];?> </div>
-                            </div>
-                            <div class="modal-footer">
-                              <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
-                              <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
-                              <style>
-                                .modal-body{
-                                  font-size:15px;
-                                  text-align:justify;
-                                  padding-left:110px;
-                                  padding-top:30px;
-                                  font-family:Roboto,sans-serif;
-                                }
-                              </style>
-                            </div>
+                        <div class="modal-content">
+                          <div class="modal-header bg-success">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">
+                                <i class="zmdi zmdi-close"></i>
+                              </span>
+                            </button>
+                            <center><h4 class="modal-title">Modal title</h4></center>
+                          </div>
+                        <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4">
+                Title:
+                </div>
+                <div class="col-sm-6">
+                <?php echo $row['title'];?>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4">
+               Description:
+                </div>
+                <div class="col-sm-6">
+                <?php echo $row['description'];?> 
+                </div>
+              
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4">
+                Date:
+                </div>
+                <div class="col-sm-6">
+                28/08/2017
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4">
+                Status:
+                </div>
+                <div class="col-sm-6">
+                Active
+                </div>
+              </div>
+            </div>
+                        <div class="modal-footer">
+                        <!--<button type="button" data-dismiss="modal" class="btn btn-success">Continue</button>-->
+                            <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
+              <style>
+              .modal-body{
+                font-size:16px;
+                padding-top:30px;
+                font-family:Roboto,sans-serif;
+              }
+              </style>
+                          </div>
                         </div>
                       </div>
-                  </div>
-                  <!-- End Modal Box  here -->
+                    </div>
+                    <!-- End Modal Box  here -->
                   </tr>
                   <?php  $i++; } ?>
                 </tbody>
