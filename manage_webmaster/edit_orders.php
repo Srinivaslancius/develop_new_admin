@@ -43,14 +43,13 @@ $id = $_GET['oid'];
                     <div class="help-block with-errors"></div>
                   </div>
                   
-                  <?php $getStatus = getDataFromTables('order_status',$status=NULL,$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);?>
                   <div class="form-group">
                     <label for="form-control-3" class="control-label">Choose your status</label>
                     <select id="form-control-3" name="order_status" class="custom-select" data-error="This field is required." required>
-                      <option value="">Select Status</option>
-                      <?php while($row = $getStatus->fetch_assoc()) {  ?>
-                          <option <?php if($row['id'] == $getOrders1['status']) { echo "Selected"; } ?> value="<?php echo $row['id']; ?>"><?php echo $row['status']; ?></option>
-                      <?php } ?>
+                      <option value="" disabled selected>Choose your status</option>
+                      <option value="1" <?php if($getOrders1['order_status'] == 1) { echo "Selected"; }?>>Pending</option>
+                      <option value="2" <?php if($getOrders1['order_status'] == 2) { echo "Selected"; }?>>Completed</option>
+                      <option value="3" <?php if($getOrders1['order_status'] == 3) { echo "Selected"; }?>>Cancelled</option>
                    </select>
                     <div class="help-block with-errors"></div>
                   </div>
