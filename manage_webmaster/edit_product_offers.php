@@ -35,9 +35,9 @@ if (!isset($_POST['submit']))  {
     } else {
      $sql1 = "UPDATE products_offers SET offer_title = '$offer_title',offer_products ='$offer_products',status = '$status'WHERE id = '$id'"; 
      if ($conn->query($sql1) === TRUE) {
-      echo "<script type='text/javascript'>window.location='products_offers.php?msg=success'</script>";
+      echo "<script type='text/javascript'>window.location='product_offers.php?msg=success'</script>";
     } else {
-      echo "<script type='text/javascript'>window.location='products_offers.php?msg=fail'</script>";
+      echo "<script type='text/javascript'>window.location='product_offers.php?msg=fail'</script>";
     }
   }
 }
