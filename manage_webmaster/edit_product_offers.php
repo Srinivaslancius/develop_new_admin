@@ -71,12 +71,12 @@ $getProductOffers = $getProductOffersData->fetch_assoc();
                     </label>
                   </div>
 
-                  <?php $services = getDataFromTables('products',$status='0',$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);  ?>
+                  <?php $products = getDataFromTables('products',$status='0',$clause=NULL,$id=NULL,$activeStatus=NULL,$activeTop=NULL);  ?>
                   <label for="form-control-2" class="control-label">Choose your Products</label>
-                  <?php while($row = $services->fetch_assoc()) { ?> 
+                  <?php while($row = $products->fetch_assoc()) { ?> 
                   <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                       <div class="form-group">
-                        <span class="form-control"><input type="checkbox" name="offer_products[]" value="<?php echo $row['product_name'] ?>"/> <?php if($row['product_name'] == $getProductOffers['offer_products']) { echo "checked=checked"; }?> <?php echo $row['product_name'] ?></span>
+                        <span class="form-control"><input type="checkbox" name="offer_products[]" value="<?php echo $row['product_name'] ?>"/> <?php if($row['id'] == $getProductOffers['offer_products']) { echo "selected=selected"; }?> <?php echo $row['product_name'] ?></span>
                         <div class="help-block with-errors"></div>
                       </div>
                   </div>
