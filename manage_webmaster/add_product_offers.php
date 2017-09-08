@@ -59,7 +59,7 @@ if (!isset($_POST['submit']))  {
                   <?php while($row = $services->fetch_assoc()) { ?> 
                   <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                       <div class="form-group">
-                        <span class="form-control"><input type="checkbox" name="offer_products[]" value="<?php echo $row['product_name'] ?>"/>  <?php echo $row['product_name'] ?></span>
+                        <span class="form-control"><input type="checkbox" name="offer_products[]" value="<?php echo $row['id'] ?>"/>  <?php echo $row['product_name'] ?></span>
                         <div class="help-block with-errors"></div>
                       </div>
                   </div>
